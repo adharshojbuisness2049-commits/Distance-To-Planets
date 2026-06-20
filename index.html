@@ -712,27 +712,94 @@
   .weight-cell.wt-to   .wval{ color:var(--verdigris); font-weight:600; }
 
   /* ---------- Live animation ---------- */
+  .sat-strip{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:10px;
+    margin-bottom:14px;
+  }
   .live-badge{
     display:inline-flex;
     align-items:center;
-    gap:5px;
+    gap:6px;
+    max-width:100%;
     font-family:'Source Code Pro', monospace;
-    font-size:10px;
-    letter-spacing:0.08em;
+    font-size:9.5px;
+    letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--verdigris);
+    background:rgba(140,47,27,0.06);
+    border:1px solid rgba(140,47,27,0.35);
+    border-radius:20px;
+    padding:5px 11px 5px 8px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    animation: badge-settle 0.6s ease-out 0.15s both, badge-callout 2.4s ease-in-out 0.8s 2;
+  }
+  .live-badge:hover, .live-badge:focus-visible{
+    border-color:var(--wax);
+    background:rgba(140,47,27,0.12);
+    transform:translateY(-1px);
+  }
+  @keyframes badge-settle{
+    from{ opacity:0; transform:translateY(-4px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @keyframes badge-callout{
+    0%, 100%{ box-shadow:0 0 0 0 rgba(140,47,27,0); }
+    20%{ box-shadow:0 0 0 5px rgba(140,47,27,0.10); }
+    40%{ box-shadow:0 0 0 0 rgba(140,47,27,0); }
+  }
+  .sat-icon-wrap{
+    position:relative;
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .sat-icon-wrap::before{
+    content:'';
+    position:absolute;
+    inset:-4px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(140,47,27,0.22), transparent 70%);
+    animation:halo 2.6s ease-in-out infinite;
+  }
+  .sat-icon{
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+    color:var(--wax);
+    position:relative;
+    z-index:1;
+  }
+  @keyframes halo{
+    0%,100%{ opacity:0.35; transform:scale(0.85); }
+    50%{ opacity:0.9; transform:scale(1.15); }
   }
   .live-dot{
-    width:6px; height:6px;
+    width:5px; height:5px;
     border-radius:50%;
-    background:var(--verdigris);
+    background:var(--wax);
     animation:pulse 2s ease-in-out infinite;
+    flex-shrink:0;
+  }
+  @media (max-width:420px){
+    .live-badge{ font-size:8.5px; padding:5px 9px 5px 7px; gap:5px; }
+    .sat-icon, .sat-icon-wrap{ width:15px; height:15px; }
   }
   @keyframes pulse{
     0%,100%{ opacity:1; }
     50%{ opacity:0.25; }
   }
-  @media (prefers-reduced-motion:reduce){ .live-dot{ animation:none; } }
+  @media (prefers-reduced-motion:reduce){
+    .live-dot{ animation:none; }
+    .live-badge{ animation:none; }
+    .sat-icon-wrap::before{ animation:none; opacity:0.5; }
+  }
 
   /* ---------- Conjunction / opposition finder ---------- */
   .events-wrap{
@@ -1056,7 +1123,7 @@
     body{ background:#fff !important; color:#000; }
     .foxing{ display:none; }
     .page{ animation:none; max-width:100%; padding:0 6px; }
-    .swap-line, .theme-toggle, .live-badge, .scrubber-wrap{ display:none !important; }
+    .swap-line, .theme-toggle, .live-badge, .sat-strip, .scrubber-wrap{ display:none !important; }
     .body-trigger, .relay-select{ border-bottom:1px solid #000; color:#000; }
     a{ color:#000 !important; }
     .entry, .events-wrap, .launch-wrap, .probe-wrap, .ledger-section,
@@ -1248,8 +1315,32 @@
   <div class="running-head">
     <span class="mark">An Ephemeris of Distance</span>
     <span class="folio" id="folioDate">—</span>
-    <span class="live-badge"><span class="live-dot"></span>live</span>
     <button type="button" class="theme-toggle" id="themeToggle" title="Toggle dark mode">☉ / ☽</button>
+  </div>
+
+  <div class="sat-strip">
+    <button type="button" class="live-badge" id="liveBadgeBtn" title="Jump to live satellite tracker">
+      <span class="sat-icon-wrap"><svg class="sat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+        <g transform="rotate(45 4 4)">
+          <rect x="0.5" y="1.7" width="7" height="4.6" rx="0.4"/>
+          <line x1="4" y1="1.7" x2="4" y2="6.3"/>
+          <line x1="0.5" y1="4" x2="7.5" y2="4"/>
+        </g>
+        <line x1="7.1" y1="7.1" x2="9" y2="9"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.2" transform="rotate(45 12 12)"/>
+        <circle cx="15.6" cy="8.4" r="1.3"/>
+        <line x1="15" y1="15" x2="16.9" y2="16.9"/>
+        <g transform="rotate(45 20 20)">
+          <rect x="16.5" y="17.7" width="7" height="4.6" rx="0.4"/>
+          <line x1="20" y1="17.7" x2="20" y2="22.3"/>
+          <line x1="16.5" y1="20" x2="23.5" y2="20"/>
+        </g>
+        <path d="M3.5 14.5c2.5-1 5.5-1 8 0-1 2.8-3.3 4.6-6 4.9z"/>
+        <line x1="7.5" y1="16.5" x2="5" y2="19"/>
+        <circle cx="4.3" cy="19.7" r="0.9"/>
+      </svg></span>
+      <span class="live-dot"></span>satellites live
+    </button>
   </div>
 
   <div class="masthead">
@@ -1471,7 +1562,7 @@
     <div class="probe-note">Figures update each second from a linear projection anchored to NASA/JPL tracking data; treat them as close estimates, not live telemetry.</div>
   </div>
 
-  <div class="sat-wrap">
+  <div class="sat-wrap" id="satelliteSection">
     <div class="section-title">
       <h2 style="font-size:16px;">Artificial satellites, tracked live</h2>
       <div class="rule"></div>
@@ -1634,7 +1725,7 @@
           <canvas id="satGlobeCanvas" style="width:100%; height:100%; display:block; cursor:grab; border-radius:6px;"></canvas>
         </div>
         <svg id="satMapSvg" width="100%" height="220" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ground track of the satellite, current position and ninety minutes either side" style="display:none;"></svg>
-        <div class="entry-annot" style="margin-top:8px;">3D view: drag to rotate, scroll to zoom. The gold trail is the ground track ninety minutes either side of now; the bright dot is the satellite's position this instant.</div>
+        <div class="entry-annot" style="margin-top:8px;">3D view: drag to rotate, scroll to zoom. The gold trail is the ground track ninety minutes either side of now &mdash; brighter ahead, dimmer behind; the bright white dot is the satellite's position this instant. The small green dot, shown only if your device shares its location, is your own position &mdash; used to compute the elevation and visibility above &mdash; not the satellite. If location access is denied or unavailable, no green dot is drawn.</div>
       </div>
     </div>
 
@@ -2989,6 +3080,18 @@
   })();
 
   // ============================================================
+  // LIVE BADGE -> SCROLL TO SATELLITE TRACKER
+  // ============================================================
+  (function(){
+    const btn = document.getElementById('liveBadgeBtn');
+    const target = document.getElementById('satelliteSection');
+    if (!btn || !target) return;
+    btn.addEventListener('click', ()=>{
+      target.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  })();
+
+  // ============================================================
   // CLOSEST TO EARTH RIGHT NOW
   // ============================================================
   function updateClosestNow(){
@@ -3559,26 +3662,14 @@
         -radius*Math.cos(lat)*Math.sin(lon)
       );
     }
-    var gratMat = new THREE.LineBasicMaterial({ color: 0x3f6280, transparent: true, opacity: 0.55 });
-    for (var lon = -150; lon < 180; lon += 30){
-      var pts = [];
-      for (var lat = -90; lat <= 90; lat += 5) pts.push(latLonToVec(lat, lon, R*1.002));
-      earthGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), gratMat));
-    }
-    for (var lat2 = -60; lat2 <= 60; lat2 += 30){
-      var pts2 = [];
-      for (var lon2 = -180; lon2 <= 180; lon2 += 5) pts2.push(latLonToVec(lat2, lon2, R*1.002));
-      var mat2 = lat2 === 0 ? new THREE.LineBasicMaterial({ color: 0xc9a44c, transparent: true, opacity: 0.7 }) : gratMat;
-      earthGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts2), mat2));
-    }
     scene.add(earthGroup);
 
-    var trackLine = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xffe49a, transparent: true, opacity: 0.85 }));
-    scene.add(trackLine);
-
-    // Past track (dimmer)
-    var trackLinePast = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xc9a44c, transparent: true, opacity: 0.35 }));
-    scene.add(trackLinePast);
+    var trackGroup = new THREE.Group();
+    scene.add(trackGroup);
+    var trackPastGroup = new THREE.Group();
+    scene.add(trackPastGroup);
+    var trackFutureMat = new THREE.LineBasicMaterial({ color: 0xffe49a, transparent: true, opacity: 0.85 });
+    var trackPastMat = new THREE.LineBasicMaterial({ color: 0xc9a44c, transparent: true, opacity: 0.35 });
 
     // Satellite dot — bright core
     var satDot = new THREE.Mesh(new THREE.SphereGeometry(3.2, 16, 16), new THREE.MeshBasicMaterial({ color: 0xffffff }));
@@ -3679,42 +3770,57 @@
     }
     animate();
 
-    globe = { R: R, latLonToVec: latLonToVec, trackLine: trackLine, trackLinePast: trackLinePast, satDot: satDot, satGlow: satGlow, satPulse: satPulse, obsDot: obsDot, obsGlow: obsGlow, sunLight: sunLight };
+    globe = { R: R, latLonToVec: latLonToVec, trackGroup: trackGroup, trackPastGroup: trackPastGroup, trackFutureMat: trackFutureMat, trackPastMat: trackPastMat, satDot: satDot, satGlow: satGlow, satPulse: satPulse, obsDot: obsDot, obsGlow: obsGlow, sunLight: sunLight };
   })();
 
   function drawGlobe(satrec, now){
     if (!globe) return;
     var gt = groundTrack(satrec, now);
 
-    // Split into past (before nowPt) and future segments
-    var futurePts = [], pastPts = [];
-    var passedNow = false;
-    gt.segs.forEach(function(seg){
-      seg.forEach(function(p){
-        if (p.now) passedNow = true;
-        var v = globe.latLonToVec(p.lat, p.lon, globe.R*1.012);
-        if (passedNow) futurePts.push(v); else pastPts.push(v);
-      });
-    });
+    // Clear previous segment lines (dispose geometry/material to avoid leaks)
+    function clearGroup(group){
+      while (group.children.length){
+        var line = group.children[0];
+        group.remove(line);
+        line.geometry.dispose();
+      }
+    }
+    clearGroup(globe.trackGroup);
+    clearGroup(globe.trackPastGroup);
 
-    if (futurePts.length){
-      globe.trackLine.geometry.dispose();
-      globe.trackLine.geometry = new THREE.BufferGeometry().setFromPoints(futurePts);
-    }
-    if (pastPts.length){
-      globe.trackLinePast.geometry.dispose();
-      globe.trackLinePast.geometry = new THREE.BufferGeometry().setFromPoints(pastPts);
-    }
+    var futureMat = globe.trackFutureMat;
+    var pastMat = globe.trackPastMat;
+
+    gt.segs.forEach(function(seg){
+      // Within a single contiguous (non-antimeridian-split) segment, further split
+      // at the "now" point so past/future never bridge across a gap.
+      var future = [], past = [];
+      var passedNow = false;
+      seg.forEach(function(p){
+        var v = globe.latLonToVec(p.lat, p.lon, globe.R*1.012);
+        if (p.now) passedNow = true;
+        if (passedNow) future.push(v); else past.push(v);
+      });
+      if (future.length > 1){
+        globe.trackGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(future), futureMat));
+      }
+      if (past.length > 1){
+        globe.trackPastGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(past), pastMat));
+      }
+    });
 
     if (gt.nowPt){
       var v = globe.latLonToVec(gt.nowPt.lat, gt.nowPt.lon, globe.R*1.018);
       globe.satDot.position.copy(v);
     }
-    if (observer){
+    if (observer && observerIsReal){
       globe.obsDot.visible = true;
       globe.obsGlow.visible = true;
       var ov = globe.latLonToVec(observer.latitude*180/Math.PI, observer.longitude*180/Math.PI, globe.R*1.008);
       globe.obsDot.position.copy(ov);
+    } else {
+      globe.obsDot.visible = false;
+      globe.obsGlow.visible = false;
     }
     var sun = sunEci(now);
     var sd = Math.sqrt(sun.x*sun.x+sun.y*sun.y+sun.z*sun.z);
@@ -4056,15 +4162,17 @@
 
   // ---------- Observer-relative geometry ----------
   var observer = null; // {lat, lon, height} in radians/radians/km
+  var observerIsReal = false; // true only when GPS succeeded
   var obsBadgeEl = document.getElementById('satObsBadge');
   var obsNoteEl = document.getElementById('satObsNote');
 
   function setObserver(latDeg, lonDeg, source){
     observer = { latitude: latDeg*Math.PI/180, longitude: lonDeg*Math.PI/180, height: 0.05 };
+    observerIsReal = (source === 'gps');
     obsBadgeEl.textContent = fmtLat(latDeg) + ', ' + fmtLon(lonDeg);
     obsNoteEl.textContent = source === 'gps'
       ? 'Using your device\u2019s reported location for range, elevation, azimuth and pass prediction.'
-      : 'Could not get your precise location, so a default reference point is used \u2014 figures below are illustrative only.';
+      : 'Could not get your precise location, so a default reference point is used \u2014 figures below are illustrative only. The globe will not plot a location marker.';
   }
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
