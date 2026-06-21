@@ -3,15 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>An Ephemeris of Distance — Interplanetary Range &amp; Light-Time</title>
-<meta name="description" content="Select any two bodies of the solar system and reckon their separation, the time light takes to cross it, launch windows, and orbital mechanics — computed live from VSOP87 planetary theory.">
-<meta property="og:title" content="An Ephemeris of Distance — Interplanetary Range & Light-Time">
-<meta property="og:description" content="Live interplanetary distances, light-time, Hohmann transfers, and launch windows for every planet, moon, and dwarf planet in the solar system.">
+<title>Distance to Planets — Live Solar System Distance & Light-Time Calculator</title>
+<meta name="description" content="Real-time distance between Earth, the Sun, and every planet — updated live. See light-time delay, travel time, launch windows, satellite tracking, and more.">
+<link rel="canonical" href="https://distancetoplanets.com/">
+<meta property="og:title" content="Distance to Planets — Live Solar System Distance Calculator">
+<meta property="og:description" content="Real-time distance between Earth, the Sun, and every planet — updated live. See light-time delay, travel time, launch windows, and satellite tracking.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://distancetoplanets.com/">
+<meta property="og:site_name" content="Distance to Planets">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="An Ephemeris of Distance">
-<meta name="twitter:description" content="Live interplanetary distances and light-time, computed from VSOP87 orbital theory.">
+<meta name="twitter:title" content="Distance to Planets — Live Solar System Distance Calculator">
+<meta name="twitter:description" content="Real-time distance between Earth, the Sun, and every planet, updated live, with light-time, travel time, and launch windows.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Distance to Planets",
+  "alternateName": "DistanceToPlanets.com",
+  "url": "https://distancetoplanets.com/",
+  "description": "Live, continuously updated distances between the Sun, Earth, and every planet, moon, and dwarf planet in the solar system, with light-time, travel time, launch windows, and satellite/aircraft tracking.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://distancetoplanets.com/?from={from_body}&to={to_body}"
+    },
+    "query-input": "required name=from_body required name=to_body"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Distance to Planets — Sections",
+  "itemListElement": [
+    { "@type": "SiteNavigationElement", "position": 1, "name": "Distance Calculator", "url": "https://distancetoplanets.com/#top" },
+    { "@type": "SiteNavigationElement", "position": 2, "name": "Looking Ahead, One Year", "url": "https://distancetoplanets.com/#forecastSection" },
+    { "@type": "SiteNavigationElement", "position": 3, "name": "Travel Time Calculator", "url": "https://distancetoplanets.com/#travelSection" },
+    { "@type": "SiteNavigationElement", "position": 4, "name": "Weight on Other Worlds", "url": "https://distancetoplanets.com/#weightSection" },
+    { "@type": "SiteNavigationElement", "position": 5, "name": "Launch Windows", "url": "https://distancetoplanets.com/#launchWrap" },
+    { "@type": "SiteNavigationElement", "position": 6, "name": "Interstellar Probe Tracker", "url": "https://distancetoplanets.com/#probeSection" },
+    { "@type": "SiteNavigationElement", "position": 7, "name": "Rocket Launch Tracker", "url": "https://distancetoplanets.com/#rocketSection" },
+    { "@type": "SiteNavigationElement", "position": 8, "name": "Satellite Tracker", "url": "https://distancetoplanets.com/#satelliteSection" },
+    { "@type": "SiteNavigationElement", "position": 9, "name": "Live Aircraft Tracker", "url": "https://distancetoplanets.com/#aircraftSection" },
+    { "@type": "SiteNavigationElement", "position": 10, "name": "Full Distance Table", "url": "https://distancetoplanets.com/#ledgerSection" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Distance to Planets",
+  "url": "https://distancetoplanets.com/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculates live distance, light-time, and travel time between any two bodies in the solar system, plus launch windows, satellite tracking, and live aircraft tracking."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How far is it from Earth to Mars right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Earth-Mars distance changes constantly as both planets orbit the Sun, ranging from about 56 million km at closest approach to over 400 million km when on opposite sides of the Sun. This page calculates the current distance live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does light take to travel from the Sun to each planet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Light takes about 8 minutes 20 seconds to reach Earth from the Sun, about 4.3 minutes to reach Mercury, around 12.5 minutes to reach Mars, and over 4 hours to reach Neptune, depending on each planet's current position in its orbit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What planet is closest to Earth right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The closest planet to Earth changes over time because all planets are in motion. Venus, Mars, and Mercury each take turns being nearest, depending on their orbital positions on a given day."
+      }
+    }
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F2ECDC'/><circle cx='16' cy='16' r='5' fill='%238C2F1B'/><circle cx='16' cy='16' r='11' fill='none' stroke='%23A89C7E' stroke-width='1.2'/><circle cx='27' cy='16' r='2' fill='%234A5B4E'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,8 +165,8 @@
     align-items:baseline;
     gap:8px;
     padding-bottom:14px;
-    border-bottom:2px solid var(--ink);
-    margin-bottom:6px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:0;
   }
   .running-head .mark{
     font-family:'Spectral', serif;
@@ -106,6 +189,37 @@
     white-space:nowrap;
     flex-shrink:0;
   }
+
+  /* ---------- Section nav bar ---------- */
+  .section-nav{
+    position:sticky;
+    top:0;
+    z-index:30;
+    display:flex;
+    gap:2px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    padding:9px 32px;
+    margin:0 -32px 0;
+  }
+  .section-nav::-webkit-scrollbar{ display:none; }
+  .section-nav a{
+    flex-shrink:0;
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+    text-decoration:none;
+    padding:5px 10px;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .section-nav a:hover{ color:var(--wax); }
+  .section-nav a.is-live{ color:var(--verdigris); }
+  .section-nav a.is-live::before{ content:"\25cf "; font-size:8px; }
 
   .masthead{
     position:relative;
@@ -715,6 +829,8 @@
   .sat-strip{
     display:flex;
     justify-content:flex-end;
+    gap:8px;
+    flex-wrap:wrap;
     margin-top:10px;
     margin-bottom:14px;
   }
@@ -742,6 +858,42 @@
     background:rgba(140,47,27,0.12);
     transform:translateY(-1px);
   }
+  .live-badge-air{
+    color:var(--verdigris);
+    background:rgba(74,91,78,0.06);
+    border-color:rgba(74,91,78,0.35);
+    animation: badge-settle 0.6s ease-out 0.3s both, badge-callout-air 2.4s ease-in-out 1.1s 2;
+  }
+  .live-badge-air:hover, .live-badge-air:focus-visible{
+    border-color:var(--verdigris);
+    background:rgba(74,91,78,0.12);
+  }
+  @keyframes badge-callout-air{
+    0%, 100%{ box-shadow:0 0 0 0 rgba(74,91,78,0); }
+    20%{ box-shadow:0 0 0 5px rgba(74,91,78,0.10); }
+    40%{ box-shadow:0 0 0 0 rgba(74,91,78,0); }
+  }
+  .live-dot.air-dot{ background:var(--verdigris); }
+  .live-badge-air .sat-icon-wrap::before{
+    background:radial-gradient(circle, rgba(74,91,78,0.22), transparent 70%);
+  }
+  .live-badge-air .sat-icon{ color:var(--verdigris); }
+
+  .live-badge-rocket{
+    color:var(--wax);
+    background:rgba(140,47,27,0.06);
+    border-color:rgba(140,47,27,0.35);
+    animation: badge-settle 0.6s ease-out 0.45s both, badge-callout 2.4s ease-in-out 1.4s 2;
+  }
+  .live-badge-rocket:hover, .live-badge-rocket:focus-visible{
+    border-color:var(--wax);
+    background:rgba(140,47,27,0.12);
+  }
+  .live-dot.rocket-dot{ background:var(--wax); }
+  .live-badge-rocket .sat-icon-wrap::before{
+    background:radial-gradient(circle, rgba(140,47,27,0.22), transparent 70%);
+  }
+  .live-badge-rocket .sat-icon{ color:var(--wax); }
   @keyframes badge-settle{
     from{ opacity:0; transform:translateY(-4px); }
     to{ opacity:1; transform:translateY(0); }
@@ -921,7 +1073,7 @@
   }
 
   /* ---------- Matrix / ledger table ---------- */
-  .ledger-section{ margin-top:8px; }
+  .ledger-section{ margin-top:24px; border-top:1px solid var(--rule-light); padding-top:22px; }
   .section-title{
     display:flex;
     align-items:baseline;
@@ -1078,7 +1230,7 @@
   }
 
   /* ---------- Probe tracker ---------- */
-  .probe-wrap{ margin-top:8px; }
+  .probe-wrap{ margin-top:24px; border-top:1px solid var(--rule-light); padding-top:22px; }
   .probe-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -1118,6 +1270,212 @@
     color:var(--muted);
   }
 
+  /* ---------- Rocket launch tracker ---------- */
+  .rocket-wrap{ margin-top:24px; border-top:1px solid var(--rule-light); padding-top:22px; }
+  .rocket-status-line{
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    letter-spacing:0.02em;
+    color:var(--muted);
+    margin-top:14px;
+  }
+  .rocket-status-line.err{ color:var(--wax); }
+  .rocket-status-line.ok{ color:var(--verdigris); }
+  .rocket-pinned-wrap{
+    margin:14px 0;
+    padding:12px 14px;
+    border:1px dashed var(--rule);
+    border-radius:4px;
+    background:var(--paper-deep);
+  }
+  .rocket-pinned-label{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:12.5px;
+    color:var(--muted);
+    margin-bottom:8px;
+  }
+  .rocket-pinned-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .rocket-pinned-chip{
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    background:var(--paper);
+    border:1px solid var(--rule-light);
+    border-radius:3px;
+    padding:6px 9px;
+    cursor:pointer;
+    line-height:1.5;
+  }
+  .rocket-pinned-chip:hover{ border-color:var(--wax); color:var(--wax); }
+  .rocket-pinned-chip .agency{ display:block; font-style:italic; color:var(--muted); font-size:10.5px; }
+
+  .rocket-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-top:16px;
+  }
+  .rocket-card{
+    border:1px solid var(--rule);
+    background:var(--paper-deep);
+    padding:16px 18px;
+    position:relative;
+    cursor:pointer;
+  }
+  .rocket-card:hover{ border-color:var(--wax); }
+  .rocket-card:focus-visible{ outline:2px solid var(--verdigris); outline-offset:2px; }
+  .rocket-card.next{ border-color:var(--wax); border-width:1.5px; }
+  .rocket-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .rocket-name{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:16px;
+    color:var(--ink);
+    line-height:1.3;
+  }
+  .rocket-provider{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .rocket-badge{
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border:1px solid currentColor;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .rocket-badge.go{ color:var(--verdigris); }
+  .rocket-badge.tbd{ color:var(--muted); }
+  .rocket-badge.hold{ color:var(--wax); }
+  .rocket-badge.flight{ color:var(--wax); animation: rocket-pulse 1.6s ease-in-out infinite; }
+  .rocket-badge.success{ color:var(--verdigris); }
+  .rocket-badge.failure{ color:var(--wax); }
+  @keyframes rocket-pulse{ 0%,100%{ opacity:1; } 50%{ opacity:0.45; } }
+  @media (prefers-reduced-motion:reduce){ .rocket-badge.flight{ animation:none; } }
+
+  .rocket-meta{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:8px 18px;
+    margin-top:12px;
+    font-family:'Source Code Pro', monospace;
+    font-size:12px;
+  }
+  @media (max-width:520px){ .rocket-meta{ grid-template-columns:1fr; } }
+  .rocket-meta-item span:first-child{
+    display:block;
+    color:var(--muted);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    margin-bottom:2px;
+  }
+  .rocket-meta-item span:last-child{ color:var(--ink); font-variant-numeric:tabular-nums; }
+
+  .rocket-countdown{
+    margin-top:12px;
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:18px;
+    color:var(--wax);
+    font-variant-numeric:tabular-nums;
+  }
+  .rocket-countdown .lbl{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:12px;
+    color:var(--muted);
+    display:block;
+    margin-bottom:2px;
+  }
+
+  .rocket-mission{
+    margin-top:10px;
+    font-family:'Spectral', serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .rocket-links{
+    margin-top:12px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .rocket-links a{
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    color:var(--verdigris);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .rocket-links a:hover{ color:var(--wax); border-color:var(--wax); }
+
+  .rocket-note{
+    margin-top:16px;
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.5;
+  }
+
+  .rocket-globe-section{
+    margin-top:26px;
+    border-top:1px solid var(--rule-light);
+    padding-top:18px;
+  }
+  .rocket-globe-pick-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:12px 0 14px;
+  }
+  .rocket-globe-pick{
+    font-family:'Source Code Pro', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    background:var(--paper-deep);
+    border:1px solid var(--rule);
+    padding:6px 10px;
+    cursor:pointer;
+  }
+  .rocket-globe-pick:hover{ border-color:var(--wax); color:var(--wax); }
+  .rocket-globe-pick-more{
+    border-style:dashed;
+    font-style:italic;
+  }
+  .rocket-globe-pick.active{
+    background:var(--wax);
+    border-color:var(--wax);
+    color:var(--paper);
+  }
+  .rocket-globe-caption{
+    margin-top:10px;
+    font-family:'Spectral', serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+
   /* ---------- Print (polished) ---------- */
   @media print{
     body{ background:#fff !important; color:#000; }
@@ -1128,7 +1486,7 @@
     a{ color:#000 !important; }
     .entry, .events-wrap, .launch-wrap, .probe-wrap, .ledger-section,
     .orrery-wrap, .forecast-wrap, .signal-wrap, .travel-wrap,
-    .relay-wrap, .grav-wrap, .calc-panels, .weight-wrap, .sat-wrap{
+    .relay-wrap, .grav-wrap, .calc-panels, .weight-wrap, .sat-wrap, .air-wrap, .rocket-wrap, .rocket-globe-section{
       page-break-inside:avoid;
       break-inside:avoid;
     }
@@ -1137,10 +1495,11 @@
     .probe-grid{ grid-template-columns:repeat(3,1fr); gap:10px; }
     .masthead, .closest-now{ margin-bottom:14px; }
     .sat-map-wrap{ display:none; }
+    .rocket-globe-section{ display:none; }
   }
 
   /* ---------- Satellite tracker ---------- */
-  .sat-wrap{ margin-top:8px; }
+  .sat-wrap{ margin-top:24px; border-top:1px solid var(--rule-light); padding-top:22px; }
   .sat-select-row{
     display:flex;
     align-items:baseline;
@@ -1240,6 +1599,584 @@
   .orbit-badge.meo{ border-color:var(--wax); color:var(--wax); }
   .orbit-badge.geo{ border-color:var(--ink-soft); color:var(--ink-soft); }
   .orbit-badge.heo{ border-color:var(--muted); color:var(--muted); }
+  .rocket-globe-stat{
+    font-family:'Source Code Pro', monospace;
+    font-size:11.5px;
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+    border:1px solid var(--rule-light);
+    border-radius:3px;
+    padding:3px 8px;
+  }
+
+  /* ---------- Aircraft overhead ---------- */
+  .air-wrap{
+    margin-top:24px;
+    border-top:1px solid var(--rule-light);
+    padding:22px 20px 18px;
+    margin-left:-20px;
+    margin-right:-20px;
+    border-radius:8px;
+    transition:background 0.4s ease, box-shadow 0.4s ease;
+  }
+  .air-wrap.flash-highlight{
+    animation: air-section-flash 1.8s ease-out 1;
+  }
+  @keyframes air-section-flash{
+    0%{ background:rgba(74,91,78,0.10); box-shadow:0 0 0 1px rgba(74,91,78,0.25); }
+    100%{ background:transparent; box-shadow:0 0 0 1px rgba(74,91,78,0); }
+  }
+  @media (prefers-reduced-motion:reduce){ .air-wrap.flash-highlight{ animation:none; } }
+
+  .rocket-wrap.flash-highlight{
+    animation: rocket-section-flash 1.8s ease-out 1;
+    padding:18px 20px;
+    margin-left:-20px;
+    margin-right:-20px;
+    border-radius:8px;
+  }
+  @keyframes rocket-section-flash{
+    0%{ background:rgba(140,47,27,0.10); box-shadow:0 0 0 1px rgba(140,47,27,0.25); }
+    100%{ background:transparent; box-shadow:0 0 0 1px rgba(140,47,27,0); }
+  }
+  @media (prefers-reduced-motion:reduce){ .rocket-wrap.flash-highlight{ animation:none; } }
+  @media (max-width:760px){ .rocket-wrap.flash-highlight{ margin-left:-12px; margin-right:-12px; padding:18px 12px; } }
+  @media (max-width:760px){ .air-wrap{ margin-left:-12px; margin-right:-12px; padding:18px 12px; } }
+  .air-input-row{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .air-input{
+    font-family:'Source Code Pro', monospace;
+    font-size:13px;
+    color:var(--ink);
+    background:none;
+    border:none;
+    border-bottom:1px solid var(--rule);
+    padding:2px 0;
+    flex:1 1 220px;
+    min-width:160px;
+  }
+  .air-input:focus{ outline:none; border-color:var(--wax); }
+  .air-input::placeholder{ color:var(--muted); }
+  .air-status{
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    letter-spacing:0.02em;
+    color:var(--muted);
+  }
+  .air-status.err{ color:var(--wax); }
+  .air-status.ok{ color:var(--verdigris); }
+
+  .air-body{ margin-top:18px; }
+  .air-place-badge{
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding-bottom:14px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-place-badge .accent{ color:var(--wax); }
+
+  /* ── Aircraft list ── */
+  .air-list{ margin-top:16px; display:flex; flex-direction:column; gap:0; }
+
+  /* Each aircraft is a two-part card: header bar + metrics strip */
+  .air-row{
+    padding:13px 0 11px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-row:last-child{ border-bottom:none; }
+
+  /* ── Identity bar (top line of card) ── */
+  .air-id-bar{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:9px;
+  }
+  .air-callsign{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--ink);
+    letter-spacing:0.01em;
+  }
+  .air-airline-name{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .air-reg-type{
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    color:var(--muted);
+    margin-left:auto;
+    white-space:nowrap;
+  }
+  .air-flag-badge{
+    font-family:'Source Code Pro', monospace;
+    font-size:9.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:2px 7px;
+    border:1px solid var(--rule-light);
+    color:var(--muted);
+  }
+  .air-flag-badge.mil{ border-color:var(--wax); color:var(--wax); }
+  .air-flag-badge.emergency{ border-color:var(--wax); color:var(--wax); background:rgba(140,47,27,0.08); }
+  .air-flag-badge.ground{ border-color:var(--rule); color:var(--ink-soft); }
+
+  /* ── Metrics row (compass + gauges) ── */
+  .air-metrics{
+    display:grid;
+    grid-template-columns:auto 1fr 1fr 1fr;
+    gap:0 18px;
+    align-items:center;
+  }
+  @media (max-width:580px){
+    .air-metrics{ grid-template-columns:auto 1fr 1fr; }
+    .air-metric-range{ display:none; }
+  }
+  @media (max-width:420px){
+    .air-metrics{ grid-template-columns:auto 1fr; }
+    .air-metric-spd{ display:none; }
+  }
+
+  /* Mini compass rose SVG wrapper */
+  .air-compass-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+    padding-right:14px;
+    border-right:1px solid var(--rule-light);
+  }
+  .air-compass-svg{ display:block; }
+  .air-compass-label{
+    font-family:'Source Code Pro', monospace;
+    font-size:9px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  /* Individual metric cell */
+  .air-metric{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    padding-left:2px;
+  }
+  .air-metric-label{
+    font-family:'Source Code Pro', monospace;
+    font-size:9px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .air-metric-value{
+    font-family:'Source Code Pro', monospace;
+    font-size:13px;
+    font-variant-numeric:tabular-nums;
+    color:var(--ink);
+  }
+  .air-metric-sub{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:10.5px;
+    color:var(--muted);
+    line-height:1.2;
+  }
+  /* Altitude bar */
+  .air-alt-bar{
+    height:3px;
+    background:var(--paper-deep);
+    border:1px solid var(--rule-light);
+    border-radius:2px;
+    overflow:hidden;
+    margin-top:4px;
+    width:100%;
+    max-width:88px;
+  }
+  .air-alt-fill{
+    height:100%;
+    background:var(--verdigris);
+    border-radius:2px;
+  }
+  /* Vrate arrow colour */
+  .air-vrate-climb{ color:var(--verdigris); }
+  .air-vrate-desc{ color:var(--wax); }
+  .air-vrate-level{ color:var(--muted); }
+
+  /* ── Route footer ── */
+  .air-route-line{
+    margin-top:9px;
+    padding-top:7px;
+    border-top:1px dashed var(--rule-light);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    flex-wrap:wrap;
+  }
+  .air-route-label{
+    font-size:9px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .air-route-airports{
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .air-route-airports .air-apt{
+    display:flex;
+    align-items:baseline;
+    gap:5px;
+  }
+  .air-route-airports .air-apt-code{
+    font-weight:600;
+    font-size:12px;
+    color:var(--ink);
+  }
+  .air-route-airports .air-apt-city{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:10.5px;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .air-route-arrow{
+    color:var(--rule);
+    font-size:10px;
+  }
+  .air-route-pending{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    color:var(--muted);
+    font-size:11px;
+  }
+  .air-detail-extras{
+    margin-left:auto;
+    font-size:9.5px;
+    color:var(--muted);
+    font-family:'Source Code Pro', monospace;
+    white-space:nowrap;
+  }
+  .air-sep{ margin:0 5px; color:var(--rule-light); }
+
+  .air-empty{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:13px;
+    color:var(--muted);
+    padding:14px 0;
+  }
+
+  /* ── Summary strip (counts across the whole fetched batch) ── */
+  .air-summary{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 22px;
+    padding:10px 0 14px;
+    margin-bottom:2px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-sum-item{
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    font-family:'Source Code Pro', monospace;
+    background:none;
+    border:none;
+    padding:3px 6px;
+    margin:-3px -6px;
+    border-radius:3px;
+    cursor:default;
+  }
+  .air-sum-num{
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+  .air-sum-label{
+    font-size:9.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .air-sum-item.warn .air-sum-num{ color:var(--wax); }
+  .air-sum-item.go .air-sum-num{ color:var(--verdigris); }
+  /* Stats that map to a real subset of the list (airborne / on ground /
+     military / emergency) are real buttons: clicking filters the rows
+     below to just that subset. Avg altitude doesn't map to one aircraft,
+     so it stays inert; fastest jumps straight to that single row instead. */
+  .air-sum-item.clickable{ cursor:pointer; }
+  .air-sum-item.clickable:hover{ background:rgba(74,69,58,0.08); }
+  .air-sum-item.clickable:focus-visible{ outline:2px solid var(--ink); outline-offset:1px; }
+  .air-sum-item.clickable.active{ background:var(--ink); }
+  .air-sum-item.clickable.active .air-sum-num,
+  .air-sum-item.clickable.active .air-sum-label{ color:var(--paper); }
+  .air-filter-status{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Source Code Pro', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    padding:8px 0;
+    margin-top:-2px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-filter-status strong{ color:var(--ink); font-weight:600; }
+  .air-filter-clear-btn{
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--verdigris);
+    background:none;
+    border:none;
+    border-bottom:1px solid var(--verdigris);
+    padding:0;
+    cursor:pointer;
+  }
+  .air-filter-clear-btn:hover{ color:var(--wax); border-bottom-color:var(--wax); }
+  .air-row.air-row-hidden{ display:none; }
+
+  /* ── Distance-band bar: shows how the fetched batch is spread across the
+     search radius, since the list itself is sorted nearest-first and a quiet
+     scroll through 50+ nearby aircraft can hide how far the rest extend. ── */
+  .air-bands-wrap{
+    margin-top:2px;
+    padding-bottom:14px;
+    margin-bottom:2px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-bands-caption{
+    font-family:'Source Code Pro', monospace;
+    font-size:9px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:7px;
+  }
+  .air-bands-bar{
+    display:flex;
+    width:100%;
+    height:20px;
+    border:1px solid var(--rule-light);
+    border-radius:3px;
+    overflow:hidden;
+    background:var(--paper-deep);
+  }
+  .air-band-seg{
+    height:100%;
+    cursor:pointer;
+    border-right:1px solid var(--paper);
+    transition:filter 0.12s ease;
+    min-width:2px;
+  }
+  .air-band-seg:last-child{ border-right:none; }
+  .air-band-seg:hover{ filter:brightness(1.18); }
+  .air-band-seg:focus-visible{ outline:2px solid var(--ink); outline-offset:1px; }
+  /* Bands shade from near (verdigris, calm/close) to far (wax, edge-of-range) */
+  .air-band-seg.b0, .air-bands-swatch.b0{ background:var(--verdigris); }
+  .air-band-seg.b1, .air-bands-swatch.b1{ background:#7a9176; }
+  .air-band-seg.b2, .air-bands-swatch.b2{ background:#a99a6e; }
+  .air-band-seg.b3, .air-bands-swatch.b3{ background:#b87a4e; }
+  .air-band-seg.b4, .air-bands-swatch.b4{ background:var(--wax); }
+  .air-bands-legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 16px;
+    margin-top:8px;
+  }
+  .air-bands-legend-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    color:var(--ink-soft);
+    cursor:pointer;
+    background:none;
+    border:none;
+    padding:0;
+  }
+  .air-bands-legend-item:hover{ color:var(--ink); }
+  .air-bands-legend-item:hover .air-bands-swatch{ filter:brightness(1.18); }
+  .air-bands-swatch{
+    width:9px; height:9px;
+    border-radius:2px;
+    flex-shrink:0;
+    transition:filter 0.12s ease;
+  }
+  .air-bands-legend-item .air-bands-count{
+    font-weight:600;
+    color:var(--ink);
+  }
+  .air-row.air-row-flash{
+    animation: air-row-flash-kf 1.6s ease-out 1;
+  }
+  @keyframes air-row-flash-kf{
+    0%{ background:rgba(74,91,78,0.14); }
+    100%{ background:transparent; }
+  }
+  @media (prefers-reduced-motion:reduce){ .air-row.air-row-flash{ animation:none; } }
+
+  /* ── Row becomes a disclosure: header always visible, panel toggles ── */
+  .air-row{ cursor:pointer; }
+  .air-row:hover .air-id-bar .air-callsign{ color:var(--wax); }
+  .air-expand-hint{
+    margin-left:auto;
+    font-family:'Source Code Pro', monospace;
+    font-size:10px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--verdigris);
+    border:1px solid var(--verdigris);
+    border-radius:11px;
+    padding:3px 10px 3px 9px;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    flex-shrink:0;
+    transition:background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .air-expand-hint .air-expand-arrow{
+    display:inline-block;
+    font-size:8px;
+    transition:transform 0.18s ease;
+  }
+  .air-row:hover .air-expand-hint{
+    background:rgba(74,91,78,0.10);
+  }
+  .air-row.open .air-expand-hint{
+    background:var(--verdigris);
+    color:var(--paper);
+    border-color:var(--verdigris);
+  }
+  .air-row.open .air-expand-hint .air-expand-arrow{ transform:rotate(180deg); }
+  .air-id-bar{ position:relative; }
+  .air-id-bar[role="button"]:focus-visible{
+    outline:2px solid var(--verdigris);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ── Detail panel (revealed on click) ── */
+  .air-detail-panel{
+    display:none;
+    margin-top:11px;
+    padding-top:11px;
+    border-top:1px dashed var(--rule-light);
+    animation: air-detail-in 0.18s ease-out;
+  }
+  .air-row.open .air-detail-panel{ display:block; }
+  @keyframes air-detail-in{
+    from{ opacity:0; transform:translateY(-3px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion:reduce){ .air-detail-panel{ animation:none; } }
+
+  .air-detail-section{ margin-bottom:12px; }
+  .air-detail-section:last-of-type{ margin-bottom:10px; }
+  .air-detail-section-title{
+    font-family:'Source Code Pro', monospace;
+    font-size:9px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--wax);
+    margin-bottom:6px;
+    padding-bottom:3px;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .air-detail-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(168px, 1fr));
+    gap:10px 16px;
+    margin-bottom:0;
+  }
+  .air-detail-item{ display:flex; flex-direction:column; gap:2px; }
+  .air-detail-item .air-metric-label{ font-size:8.5px; }
+  .air-detail-item .air-detail-val{
+    font-family:'Source Code Pro', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+  }
+  .air-detail-val.flag{ color:var(--wax); }
+
+  .air-photo-wrap{
+    margin-top:4px;
+    margin-bottom:10px;
+  }
+  .air-photo-wrap img{
+    display:block;
+    width:100%;
+    max-width:360px;
+    border:1px solid var(--rule-light);
+    background:var(--paper-deep);
+  }
+  .air-photo-credit{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:10px;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .air-photo-placeholder{
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:11px;
+    color:var(--muted);
+  }
+
+  .air-map-link{
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    color:var(--verdigris);
+    text-decoration:none;
+    border-bottom:1px solid var(--verdigris);
+    padding-bottom:1px;
+  }
+  .air-map-link:hover{ color:var(--wax); border-color:var(--wax); }
+  .air-note{
+    margin-top:16px;
+    font-family:'Spectral', serif;
+    font-style:italic;
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.5;
+  }
+  .air-use-loc{
+    font-family:'Source Code Pro', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    color:var(--verdigris);
+    background:none;
+    border:none;
+    border-bottom:1px solid transparent;
+    cursor:pointer;
+    padding:2px 0;
+    white-space:nowrap;
+  }
+  .air-use-loc:hover{ border-bottom-color:var(--verdigris); }
 
   .sat-tle-wrap{
     margin-top:18px;
@@ -1305,12 +2242,23 @@
     color:var(--ink-soft);
   }
 </style>
+<script>
+  // Set theme before first paint to avoid a flash of the wrong mode.
+  (function(){
+    try{
+      var saved = localStorage.getItem('ephemeris-theme');
+      if (saved !== 'light') document.documentElement.setAttribute('data-theme','dark');
+    } catch(e){
+      document.documentElement.setAttribute('data-theme','dark');
+    }
+  })();
+</script>
 </head>
 <body>
 
 <div class="foxing" aria-hidden="true"></div>
 
-<div class="page">
+<div class="page" id="top">
 
   <div class="running-head">
     <span class="mark">An Ephemeris of Distance</span>
@@ -1318,7 +2266,30 @@
     <button type="button" class="theme-toggle" id="themeToggle" title="Toggle dark mode">☉ / ☽</button>
   </div>
 
+  <nav class="section-nav" aria-label="Jump to section">
+    <a href="#top">Distance calculator</a>
+    <a href="#forecastSection">Year ahead</a>
+    <a href="#travelSection">Travel time</a>
+    <a href="#weightSection">Weight, worlds compared</a>
+    <a href="#launchWrap">Launch windows</a>
+    <a href="#probeSection">Interstellar probes</a>
+    <a href="#rocketSection" class="is-live">Rocket launches</a>
+    <a href="#satelliteSection" class="is-live">Satellites</a>
+    <a href="#aircraftSection" class="is-live">Aircraft</a>
+    <a href="#ledgerSection">Full table</a>
+  </nav>
+
   <div class="sat-strip">
+    <button type="button" class="live-badge live-badge-rocket" id="rocketLiveBadgeBtn" title="Jump to rocket launch tracker">
+      <span class="sat-icon-wrap"><svg class="sat-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 1.8c2.6 2.1 4.1 5.3 4.1 9.1 0 2.3-.5 4.3-1.4 6l-2.7 2.4-2.7-2.4c-.9-1.7-1.4-3.7-1.4-6 0-3.8 1.5-7 4.1-9.1z"/>
+        <circle cx="12" cy="9.6" r="1.6" fill="var(--paper)"/>
+        <path d="M8.6 14.2l-2.9 1.1.6-3.3z"/>
+        <path d="M15.4 14.2l2.9 1.1-.6-3.3z"/>
+        <path d="M10.3 19.1l1.7 3 1.7-3c-.5-.5-1-.8-1.7-.8s-1.2.3-1.7.8z"/>
+      </svg></span>
+      <span class="live-dot rocket-dot"></span>rocket launches
+    </button>
     <button type="button" class="live-badge" id="liveBadgeBtn" title="Jump to live satellite tracker">
       <span class="sat-icon-wrap"><svg class="sat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
         <g transform="rotate(45 4 4)">
@@ -1340,6 +2311,12 @@
         <circle cx="4.3" cy="19.7" r="0.9"/>
       </svg></span>
       <span class="live-dot"></span>satellites live
+    </button>
+    <button type="button" class="live-badge live-badge-air" id="airLiveBadgeBtn" title="Jump to live aircraft tracker">
+      <span class="sat-icon-wrap"><svg class="sat-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 1.5c.5 0 .9.4.9.9v6.2l6.7 4v1.9l-6.7-2.1v4.4l1.9 1.4v1.6l-2.8-.9-2.8.9v-1.6l1.9-1.4v-4.4l-6.7 2.1v-1.9l6.7-4V2.4c0-.5.4-.9.9-.9z"/>
+      </svg></span>
+      <span class="live-dot air-dot"></span>aircraft live
     </button>
   </div>
 
@@ -1401,7 +2378,7 @@
       </div>
     </div>
 
-    <div class="forecast-wrap">
+    <div class="forecast-wrap" id="forecastSection">
       <div class="section-title">
         <h2 style="font-size:16px;">Looking ahead, one year</h2>
         <div class="rule"></div>
@@ -1444,7 +2421,7 @@
       </div>
     </div>
 
-    <div class="travel-wrap">
+    <div class="travel-wrap" id="travelSection">
       <div class="section-title">
         <h2 style="font-size:16px;">Were you to travel there</h2>
         <div class="rule"></div>
@@ -1515,7 +2492,7 @@
     </div>
 
     <!-- WEIGHT COMPARISON -->
-    <div class="weight-wrap">
+    <div class="weight-wrap" id="weightSection">
       <div class="section-title">
         <h2 style="font-size:16px;">Your weight, worlds compared</h2>
         <div class="rule"></div>
@@ -1552,7 +2529,7 @@
 
   </div>
 
-  <div class="probe-wrap">
+  <div class="probe-wrap" id="probeSection">
     <div class="section-title">
       <h2 style="font-size:16px;">Where the interstellar probes are now</h2>
       <div class="rule"></div>
@@ -1560,6 +2537,36 @@
     <div class="entry-annot">Three craft now beyond the planets, reckoned from their last known heliocentric range and outward speed — distance from Earth is approximated as distance from the Sun, accurate to within about one astronomical unit.</div>
     <div class="probe-grid" id="probeGrid"></div>
     <div class="probe-note">Figures update each second from a linear projection anchored to NASA/JPL tracking data; treat them as close estimates, not live telemetry.</div>
+  </div>
+
+  <div class="rocket-wrap" id="rocketSection">
+    <div class="section-title">
+      <h2 style="font-size:16px;">Rocket launches, upcoming and live</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="entry-annot">The next scheduled orbital launches worldwide, with a running countdown to liftoff. A launch in progress is marked accordingly, with a link to its live webcast where one exists.</div>
+    <div class="rocket-status-line" id="rocketStatus">looking up the next launches&hellip;</div>
+    <div class="rocket-grid" id="rocketGrid"></div>
+    <div class="rocket-viewmore-wrap" id="rocketViewMoreWrap" style="text-align:center; margin:10px 0;"></div>
+    <div class="rocket-note">Schedule and status drawn from The Space Devs' Launch Library, a volunteer-maintained public database — dates marked "TBD" are estimates and frequently slip; "Go" means the launch is currently on track. This page does not track a rocket's in-flight position once it has lifted off — no public free feed provides that — but will show its status as "In Flight" and link to a live webcast if the provider has one running.</div>
+
+    <div class="rocket-globe-section">
+      <div class="section-title">
+        <h2 style="font-size:16px;">Launch trajectory, on the globe</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="rocket-globe-pick-row" id="rocketGlobePickRow"></div>
+      <div id="rocketGlobeWrap" style="position:relative; width:100%; height:340px; touch-action:none;">
+        <canvas id="rocketGlobeCanvas" style="width:100%; height:100%; display:block; cursor:grab; border-radius:6px;"></canvas>
+      </div>
+      <div class="rocket-globe-readouts" id="rocketGlobeReadouts" style="display:none; gap:10px; flex-wrap:wrap; align-items:center; margin-top:8px;">
+        <span class="orbit-badge" id="rocketOrbitBadge" style="display:none;">—</span>
+        <span class="rocket-globe-stat" id="rocketIncStat" style="display:none;"></span>
+        <span class="rocket-globe-stat" id="rocketDurStat" style="display:none;"></span>
+      </div>
+      <div class="rocket-globe-caption" id="rocketGlobeCaption">Pick a launch above to see its pad and an illustrative ascent path.</div>
+      <div class="entry-annot" style="margin-top:8px;">This trajectory is a simulated, physics-shaped ascent curve — launch latitude sets the real orbital inclination, and the climb profile follows a typical gravity-turn shape — it is not a live feed of the rocket's actual GPS position. No public free feed provides true real-time rocket telemetry; this is illustrative, not tracking, and is clearly an approximation rather than the mission's real flown path. Drag to rotate, scroll to zoom, same as the satellite globe above.</div>
+    </div>
   </div>
 
   <div class="sat-wrap" id="satelliteSection">
@@ -1732,7 +2739,45 @@
     <div class="sat-note">Elements drawn directly from CelesTrak (ultimately sourced from the 18th Space Defense Squadron) — last fetched <span id="satFetchTime">—</span>. All propagation thereafter happens here in your browser, not on a server. If this panel cannot reach celestrak.org, your network may be blocking it.</div>
   </div>
 
-  <div class="ledger-section">
+  <div class="air-wrap" id="aircraftSection">
+    <div class="section-title">
+      <h2 style="font-size:16px;">What's overhead, right now</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="entry-annot">Live ADS-B positions of aircraft near a place you choose, from transponder broadcasts picked up by a global network of ground receivers — typically a few seconds old, not a satellite image. Coverage is good along flight corridors and near airports, and often empty over quiet areas; that is the real sky, not a fault of this page.</div>
+
+    <div class="air-input-row">
+      <input type="text" class="air-input" id="airPlaceInput" placeholder="city, airport, or address" autocomplete="off">
+      <select class="relay-select" id="airRadiusSelect" title="Search radius">
+        <option value="15">within 15 km</option>
+        <option value="40" selected>within 40 km</option>
+        <option value="100">within 100 km</option>
+        <option value="250">within 250 km</option>
+      </select>
+      <button class="swap-btn" id="airSearchBtn" type="button">find</button>
+      <button class="air-use-loc" id="airUseLocBtn" type="button">use my location</button>
+    </div>
+    <div class="air-input-row" style="margin-top:8px;">
+      <span class="air-status" id="airStatus">enter a place to begin</span>
+    </div>
+
+    <div class="air-body" id="airBody" style="display:none;">
+      <div class="air-place-badge" id="airPlaceBadge">—</div>
+      <div class="air-summary" id="airSummary" style="display:none;"></div>
+      <div class="air-filter-status" id="airFilterStatus" style="display:none;"></div>
+      <div class="air-bands-wrap" id="airBandsWrap" style="display:none;">
+        <div class="air-bands-caption">Spread across the search radius &mdash; click a band to jump there</div>
+        <div class="air-bands-bar" id="airBandsBar" role="group" aria-label="Distance bands"></div>
+        <div class="air-bands-legend" id="airBandsLegend"></div>
+      </div>
+      <div class="air-list" id="airList"></div>
+      <div class="air-note" id="airNote">Refreshing automatically every 8 seconds at whichever radius is selected above. Altitude in feet (barometric, with GNSS-geometric alongside when reported), speed in knots, heading in degrees from true north, range from the searched point; the expanded detail panel adds km/h, mph, metres, m/s, and Mach alongside these. Tap any aircraft to expand its full reported telemetry, including a photo where one is on file. The line below each aircraft in its collapsed state shows climb/descent rate and route; how the position was derived &mdash; ADS-B is a direct GPS report from the aircraft and is highly accurate; MLAT is computed from signal-arrival-time differences between ground receivers and can be noticeably less precise; older "seen" values mean the position is correspondingly stale &mdash; is shown once expanded.</div>
+      <div class="air-note">All aircraft with a reported position are shown, sorted by distance from the searched point. Aircraft broadcasting without a position (Mode S only) are counted in the status but cannot be placed on a distance ranking and are not shown. Two nearby places with a wide radius selected will often show the same aircraft, since their search areas overlap &mdash; narrow the radius to tell them apart.</div>
+      <div class="air-note">Operator name and full aircraft type are looked up from the callsign prefix and ICAO type code against a curated list of common carriers and aircraft &mdash; not every operator is included, and an unrecognised one simply shows its raw code instead of a name. Origin and destination, when shown, come from a separate public flight-route database keyed to the callsign; this data is volunteer-maintained and occasionally stale or wrong, and only exists at all for flights with a published schedule, so private, general-aviation, and most military aircraft will correctly show no route rather than a guessed one. Aircraft photos, when shown, are crowd-submitted stock images of that registration or airframe type &mdash; not a live picture of this specific flight overhead. Mach number is taken directly from the feed when the aircraft reports it; otherwise it is estimated from true airspeed and a standard-atmosphere model of the local speed of sound at the reported altitude, marked "est." accordingly. Passenger information is never public for any aircraft, anywhere, and is not something this page could show even in principle.</div>
+    </div>
+  </div>
+
+  <div class="ledger-section" id="ledgerSection">
     <div class="section-title">
       <h2>The full table</h2>
       <div class="rule"></div>
@@ -3070,12 +4115,33 @@
   (function(){
     const html = document.documentElement;
     const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('ephemeris-theme');
-    if (saved === 'dark') html.setAttribute('data-theme','dark');
     btn.addEventListener('click', ()=>{
       const isDark = html.getAttribute('data-theme') === 'dark';
       if (isDark){ html.removeAttribute('data-theme'); localStorage.setItem('ephemeris-theme','light'); }
       else { html.setAttribute('data-theme','dark'); localStorage.setItem('ephemeris-theme','dark'); }
+    });
+  })();
+
+  // ============================================================
+  // LIVE BADGE -> SCROLL TO ROCKET TRACKER
+  // ============================================================
+  (function(){
+    const btn = document.getElementById('rocketLiveBadgeBtn');
+    const target = document.getElementById('rocketSection');
+    if (!btn || !target) return;
+    btn.addEventListener('click', function(){
+      var doScroll = function(){
+        var rect = target.getBoundingClientRect();
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var top = scrollTop + rect.top - 12;
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: top, behavior: prefersReduced ? 'auto' : 'smooth' });
+        target.classList.remove('flash-highlight');
+        void target.offsetWidth;
+        target.classList.add('flash-highlight');
+        setTimeout(function(){ target.classList.remove('flash-highlight'); }, 1900);
+      };
+      requestAnimationFrame(function(){ requestAnimationFrame(doScroll); });
     });
   })();
 
@@ -3088,6 +4154,34 @@
     if (!btn || !target) return;
     btn.addEventListener('click', ()=>{
       target.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  })();
+
+  // ============================================================
+  // LIVE BADGE -> SCROLL TO AIRCRAFT TRACKER
+  // ============================================================
+  (function(){
+    const btn = document.getElementById('airLiveBadgeBtn');
+    const target = document.getElementById('aircraftSection');
+    if (!btn || !target) return;
+    btn.addEventListener('click', function(){
+      // Use getBoundingClientRect + current scroll position for a reliable
+      // pixel offset, instead of scrollIntoView which can land wrong on
+      // mobile when the section is collapsed or the page is mid-reflow.
+      var doScroll = function(){
+        var rect = target.getBoundingClientRect();
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var top = scrollTop + rect.top - 12; // 12px breathing room above section
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: top, behavior: prefersReduced ? 'auto' : 'smooth' });
+        // Flash highlight
+        target.classList.remove('flash-highlight');
+        void target.offsetWidth; // force reflow to restart animation
+        target.classList.add('flash-highlight');
+        setTimeout(function(){ target.classList.remove('flash-highlight'); }, 1900);
+      };
+      // rAF ensures layout is settled before we read getBoundingClientRect
+      requestAnimationFrame(function(){ requestAnimationFrame(doScroll); });
     });
   })();
 
@@ -3374,6 +4468,254 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/satellite.js/4.1.3/satellite.min.js"></script>
 <script>
+// ---------- Shared 3D globe factory (Three.js) ----------
+// Builds an independent Earth scene + camera + drag/zoom controls in a given
+// canvas. Used by both the satellite tracker and the rocket launch tracker —
+// each gets its own scene, so the two panels can be open and animating at
+// the same time without fighting over a shared canvas or render loop.
+function buildEarthGlobe(canvasId, wrapId, opts){
+  if (typeof THREE === 'undefined') return null;
+  var wrap = document.getElementById(wrapId);
+  var canvas = document.getElementById(canvasId);
+  if (!wrap || !canvas) return null;
+  opts = opts || {};
+
+  var R = 100;
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(45, wrap.clientWidth/wrap.clientHeight, 1, 5000);
+  camera.position.set(0, 0, R * (opts.startDist || 3.2));
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  function resize(){
+    var w = wrap.clientWidth, h = wrap.clientHeight || 340;
+    renderer.setSize(w, h, false);
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  scene.add(new THREE.AmbientLight(0x9fb3c8, 0.55));
+  var sunLight = new THREE.DirectionalLight(0xfff3d6, 1.6);
+  scene.add(sunLight);
+  var rimLight = new THREE.DirectionalLight(0x4a6f99, 0.35);
+  rimLight.position.set(-1,-1,-1);
+  scene.add(rimLight);
+
+  // Faint starfield for depth.
+  var starGeo = new THREE.BufferGeometry();
+  var starCount = 700, starPos = new Float32Array(starCount*3);
+  for (var s2 = 0; s2 < starCount; s2++){
+    var rr = 1400 + Math.random()*600;
+    var th = Math.random()*Math.PI*2, ph = Math.acos(2*Math.random()-1);
+    starPos[s2*3]   = rr*Math.sin(ph)*Math.cos(th);
+    starPos[s2*3+1] = rr*Math.sin(ph)*Math.sin(th);
+    starPos[s2*3+2] = rr*Math.cos(ph);
+  }
+  starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+  scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x9fb3c8, size: 1.4, sizeAttenuation: false, transparent: true, opacity: 0.6 })));
+
+  // Earth: procedural canvas map texture with continents, poles, equator.
+  var earthGroup = new THREE.Group();
+
+  function buildEarthCanvas(){
+    var W = 2048, H = 1024;
+    var cnv = document.createElement('canvas'); cnv.width = W; cnv.height = H;
+    var ctx = cnv.getContext('2d');
+    ctx.fillStyle = '#1a3a54';
+    ctx.fillRect(0, 0, W, H);
+    function px(lon, lat){ return [(lon+180)/360*W, (90-lat)/180*H]; }
+    function poly(pts, fill, stroke){
+      ctx.beginPath();
+      var p0 = px(pts[0][0], pts[0][1]);
+      ctx.moveTo(p0[0], p0[1]);
+      for (var i=1;i<pts.length;i++){ var p=px(pts[i][0],pts[i][1]); ctx.lineTo(p[0],p[1]); }
+      ctx.closePath();
+      if (fill){ ctx.fillStyle = fill; ctx.fill(); }
+      if (stroke){ ctx.strokeStyle = stroke; ctx.lineWidth=1; ctx.stroke(); }
+    }
+    var land = '#2e5e38', coast = '#3a7040';
+    poly([[-168,72],[-140,70],[-95,75],[-80,73],[-65,47],[-52,47],[-64,44],[-70,41],[-75,35],[-80,25],[-87,15],[-77,8],[-83,10],[-90,16],[-105,20],[-110,30],[-117,32],[-124,37],[-124,49],[-122,55],[-130,56],[-137,59],[-145,60],[-152,60],[-165,62],[-168,66]], land, coast);
+    poly([[-44,83],[-20,83],[-18,77],[-30,72],[-44,76],[-52,80]], land, coast);
+    poly([[-168,60],[-160,55],[-150,58],[-136,58],[-130,55],[-140,52],[-160,53],[-168,58]], land, coast);
+    poly([[-82,8],[-77,0],[-50,-5],[-35,-8],[-34,-22],[-40,-22],[-52,-33],[-58,-38],[-65,-42],[-67,-55],[-60,-52],[-54,-45],[-50,-29],[-48,-16],[-40,-2],[-50,5],[-60,10],[-70,12],[-77,8]], land, coast);
+    poly([[0,51],[5,48],[8,48],[15,48],[20,47],[28,46],[30,48],[27,52],[20,55],[15,58],[10,58],[5,60],[0,62],[-5,58],[-8,52],[0,51]], land, coast);
+    poly([[5,58],[10,58],[15,60],[20,60],[26,65],[28,71],[20,70],[15,70],[10,62],[5,58]], land, coast);
+    poly([[-9,37],[-6,36],[0,40],[0,43],[-8,44],[-9,42],[-9,37]], land, coast);
+    poly([[-5,50],[0,51],[2,52],[0,53],[-4,54],[-6,58],[-4,57],[-3,55],[-2,51],[-5,50]], land, coast);
+    poly([[-5,36],[10,37],[36,37],[36,30],[43,11],[50,11],[44,0],[40,-10],[35,-20],[28,-30],[18,-35],[16,-30],[14,-22],[10,-5],[8,4],[0,5],[-5,5],[-15,12],[-18,20],[-16,30],[-10,36],[-5,36]], land, coast);
+    poly([[44,-12],[48,-13],[50,-18],[48,-24],[44,-25],[43,-18],[44,-12]], land, coast);
+    poly([[30,42],[40,36],[50,30],[60,22],[80,10],[100,5],[105,5],[110,0],[120,5],[130,10],[140,35],[140,45],[135,55],[120,55],[100,55],[90,55],[80,50],[70,55],[60,55],[50,45],[40,38],[30,42]], land, coast);
+    poly([[68,22],[80,28],[88,28],[92,20],[80,8],[72,8],[66,15],[68,22]], land, coast);
+    poly([[36,30],[44,30],[58,22],[56,12],[44,12],[36,22],[36,30]], land, coast);
+    poly([[98,20],[102,22],[105,22],[108,15],[105,10],[100,2],[100,5],[105,5],[110,0],[120,5],[108,5],[100,10],[98,20]], land, coast);
+    poly([[130,32],[135,34],[140,38],[142,43],[140,45],[136,42],[132,33],[130,32]], land, coast);
+    poly([[114,-22],[120,-34],[130,-33],[140,-38],[148,-38],[152,-28],[148,-18],[136,-12],[130,-14],[120,-22],[114,-22]], land, coast);
+    poly([[172,-36],[176,-36],[178,-38],[176,-40],[172,-39],[172,-36]], land, coast);
+    poly([[-180,-70],[-120,-68],[-60,-72],[0,-68],[60,-65],[120,-66],[180,-70],[180,-90],[-180,-90]], '#c8e0f0', '#a0c8e8');
+    poly([[-180,75],[-120,73],[-60,72],[0,72],[60,72],[120,73],[180,75],[180,90],[-180,90]], '#d8ecf8', '#b0d4ec');
+    ctx.beginPath(); ctx.moveTo(0, H/2); ctx.lineTo(W, H/2);
+    ctx.strokeStyle = '#c9a44c'; ctx.lineWidth = 3; ctx.stroke();
+    var tropicY = px(0, 23.5)[1];
+    ctx.beginPath(); ctx.moveTo(0, tropicY); ctx.lineTo(W, tropicY);
+    ctx.strokeStyle = '#8b7340'; ctx.lineWidth = 1.2; ctx.stroke();
+    tropicY = px(0, -23.5)[1];
+    ctx.beginPath(); ctx.moveTo(0, tropicY); ctx.lineTo(W, tropicY);
+    ctx.strokeStyle = '#8b7340'; ctx.lineWidth = 1.2; ctx.stroke();
+    var arcticY = px(0, 66.5)[1];
+    ctx.beginPath(); ctx.moveTo(0, arcticY); ctx.lineTo(W, arcticY);
+    ctx.strokeStyle = '#5a88a8'; ctx.lineWidth = 1.2; ctx.stroke();
+    arcticY = px(0, -66.5)[1];
+    ctx.beginPath(); ctx.moveTo(0, arcticY); ctx.lineTo(W, arcticY);
+    ctx.strokeStyle = '#5a88a8'; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.font = 'bold 22px Georgia, serif';
+    ctx.fillStyle = '#c9a44c';
+    ctx.textAlign = 'left';
+    var eqP = px(2, 0); ctx.fillText('Equator', eqP[0], eqP[1]-4);
+    ctx.fillStyle = '#d8ecf8'; ctx.font = 'bold 18px Georgia, serif';
+    var npP = px(10, 88); ctx.fillText('N', npP[0], npP[1]);
+    var spP = px(10, -84); ctx.fillText('S', spP[0], spP[1]);
+    return cnv;
+  }
+
+  var earthCanvas = buildEarthCanvas();
+  var earthTex = new THREE.CanvasTexture(earthCanvas);
+  var earthMat = new THREE.MeshPhongMaterial({ map: earthTex, specular: 0x111111, shininess: 8 });
+  var earth = new THREE.Mesh(new THREE.SphereGeometry(R, 64, 48), earthMat);
+  earthGroup.add(earth);
+
+  var texLoader = new THREE.TextureLoader();
+  texLoader.crossOrigin = 'anonymous';
+  texLoader.load(
+    'https://unpkg.com/three-globe@2.31.1/example/img/earth-blue-marble.jpg',
+    function(tex){ earth.material = new THREE.MeshPhongMaterial({ map: tex, specular: 0x222222, shininess: 8 }); },
+    undefined,
+    function(){ /* keep canvas map */ }
+  );
+  var atmosphere = new THREE.Mesh(
+    new THREE.SphereGeometry(R*1.035, 48, 32),
+    new THREE.MeshBasicMaterial({ color: 0x6fa3d6, transparent: true, opacity: 0.10, side: THREE.BackSide })
+  );
+  earthGroup.add(atmosphere);
+
+  function makeLabelSprite(text, color){
+    var cnv = document.createElement('canvas'); cnv.width = 128; cnv.height = 48;
+    var ctx = cnv.getContext('2d');
+    ctx.font = '28px Georgia, serif';
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(text, 64, 24);
+    var sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(cnv), transparent: true, depthTest: false }));
+    sprite.scale.set(26, 10, 1);
+    return sprite;
+  }
+  function latLonToVec(latDeg, lonDeg, radius){
+    var lat = latDeg*Math.PI/180, lon = lonDeg*Math.PI/180;
+    return new THREE.Vector3(
+      radius*Math.cos(lat)*Math.cos(lon),
+      radius*Math.sin(lat),
+      -radius*Math.cos(lat)*Math.sin(lon)
+    );
+  }
+  var poleMat = new THREE.MeshBasicMaterial({ color: 0xe8c468 });
+  var northPole = new THREE.Mesh(new THREE.SphereGeometry(1.6, 8, 8), poleMat);
+  northPole.position.copy(latLonToVec(90, 0, R*1.01));
+  earthGroup.add(northPole);
+  var nLabel = makeLabelSprite('N', '#e8c468');
+  nLabel.position.copy(latLonToVec(90, 0, R*1.18));
+  earthGroup.add(nLabel);
+  var southPole = new THREE.Mesh(new THREE.SphereGeometry(1.6, 8, 8), poleMat);
+  southPole.position.copy(latLonToVec(-90, 0, R*1.01));
+  earthGroup.add(southPole);
+  var sLabel = makeLabelSprite('S', '#e8c468');
+  sLabel.position.copy(latLonToVec(-90, 0, R*1.18));
+  earthGroup.add(sLabel);
+
+  scene.add(earthGroup);
+
+  function makeGlowSprite(color, size){
+    var cnv = document.createElement('canvas'); cnv.width = 64; cnv.height = 64;
+    var ctx = cnv.getContext('2d');
+    var grad = ctx.createRadialGradient(32,32,2,32,32,30);
+    grad.addColorStop(0, color);
+    grad.addColorStop(0.4, color.replace('1)', '0.4)'));
+    grad.addColorStop(1, color.replace('1)', '0)'));
+    ctx.fillStyle = grad;
+    ctx.fillRect(0,0,64,64);
+    var mat = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(cnv), transparent: true, depthTest: false, blending: THREE.AdditiveBlending });
+    var sprite = new THREE.Sprite(mat);
+    sprite.scale.set(size, size, 1);
+    return sprite;
+  }
+
+  // Manual orbit camera: separate angle + distance state, with damping
+  // (no OrbitControls in three r128 per environment constraints).
+  var rotX = 0.3, rotY = 0.4, camDist = R * (opts.startDist || 3.2);
+  var velX = 0, velY = 0, dragging = false, lastX = 0, lastY = 0;
+  var minDist = R*1.25, maxDist = R*7;
+
+  canvas.addEventListener('pointerdown', function(e){
+    dragging = true; lastX = e.clientX; lastY = e.clientY; canvas.style.cursor='grabbing';
+    canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId);
+  });
+  window.addEventListener('pointerup', function(){ dragging = false; canvas.style.cursor='grab'; });
+  window.addEventListener('pointercancel', function(){ dragging = false; });
+  window.addEventListener('pointermove', function(e){
+    if (!dragging) return;
+    var dx = (e.clientX - lastX) * 0.006, dy = (e.clientY - lastY) * 0.006;
+    velY = dx; velX = dy;
+    rotY += dx;
+    rotX = Math.max(-1.45, Math.min(1.45, rotX + dy));
+    lastX = e.clientX; lastY = e.clientY;
+  });
+  canvas.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var factor = Math.exp(e.deltaY * 0.0015);
+    camDist = Math.max(minDist, Math.min(maxDist, camDist * factor));
+  }, { passive: false });
+
+  var pinchStart = null;
+  canvas.addEventListener('touchstart', function(e){
+    if (e.touches.length === 2) pinchStart = { d: touchDist(e.touches), dist: camDist };
+  }, { passive: true });
+  canvas.addEventListener('touchmove', function(e){
+    if (e.touches.length === 2 && pinchStart){
+      var d = touchDist(e.touches);
+      camDist = Math.max(minDist, Math.min(maxDist, pinchStart.dist * (pinchStart.d / d)));
+    }
+  }, { passive: true });
+  function touchDist(t){ var dx=t[0].clientX-t[1].clientX, dy=t[0].clientY-t[1].clientY; return Math.sqrt(dx*dx+dy*dy); }
+
+  var _animT = 0;
+  var extraTick = null; // optional per-frame callback set by the caller
+  function animate(){
+    requestAnimationFrame(animate);
+    _animT += 0.04;
+    if (!dragging && (velX !== 0 || velY !== 0)){
+      rotY += velY;
+      rotX = Math.max(-1.45, Math.min(1.45, rotX + velX));
+      velY *= 0.92; velX *= 0.92;
+      if (Math.abs(velY) < 0.0002) velY = 0;
+      if (Math.abs(velX) < 0.0002) velX = 0;
+    }
+    camera.position.x = Math.sin(rotY)*Math.cos(rotX)*camDist;
+    camera.position.y = Math.sin(rotX)*camDist;
+    camera.position.z = Math.cos(rotY)*Math.cos(rotX)*camDist;
+    camera.lookAt(0,0,0);
+    if (extraTick) extraTick(_animT);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  return {
+    R: R, scene: scene, camera: camera, renderer: renderer,
+    latLonToVec: latLonToVec, sunLight: sunLight,
+    makeGlowSprite: makeGlowSprite,
+    setTick: function(fn){ extraTick = fn; },
+    animT: function(){ return _animT; }
+  };
+}
+</script>
+<script>
 (function(){
   "use strict";
 
@@ -3456,213 +4798,13 @@
       document.getElementById('satGlobeWrap').style.display = 'none';
       return;
     }
-    var wrap = document.getElementById('satGlobeWrap');
-    var canvas = document.getElementById('satGlobeCanvas');
-    var R = 100;
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(45, wrap.clientWidth/wrap.clientHeight, 1, 5000);
-    camera.position.set(0, 0, R*3.2);
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    function resize(){
-      var w = wrap.clientWidth, h = wrap.clientHeight || 340;
-      renderer.setSize(w, h, false);
-      camera.aspect = w/h; camera.updateProjectionMatrix();
+    var base = buildEarthGlobe('satGlobeCanvas', 'satGlobeWrap', { startDist: 3.2 });
+    if (!base){
+      mapSvg.style.display = '';
+      document.getElementById('satGlobeWrap').style.display = 'none';
+      return;
     }
-    resize();
-    window.addEventListener('resize', resize);
-
-    scene.add(new THREE.AmbientLight(0x9fb3c8, 0.55));
-    var sunLight = new THREE.DirectionalLight(0xfff3d6, 1.6);
-    scene.add(sunLight);
-    var rimLight = new THREE.DirectionalLight(0x4a6f99, 0.35);
-    rimLight.position.set(-1,-1,-1);
-    scene.add(rimLight);
-
-    // Faint starfield for depth.
-    var starGeo = new THREE.BufferGeometry();
-    var starCount = 700, starPos = new Float32Array(starCount*3);
-    for (var s2 = 0; s2 < starCount; s2++){
-      var rr = 1400 + Math.random()*600;
-      var th = Math.random()*Math.PI*2, ph = Math.acos(2*Math.random()-1);
-      starPos[s2*3]   = rr*Math.sin(ph)*Math.cos(th);
-      starPos[s2*3+1] = rr*Math.sin(ph)*Math.sin(th);
-      starPos[s2*3+2] = rr*Math.cos(ph);
-    }
-    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-    scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x9fb3c8, size: 1.4, sizeAttenuation: false, transparent: true, opacity: 0.6 })));
-
-    // Earth: procedural canvas map texture with continents, poles, equator.
-    var earthGroup = new THREE.Group();
-
-    // Build a 2048×1024 equirectangular canvas map.
-    function buildEarthCanvas(){
-      var W = 2048, H = 1024;
-      var cnv = document.createElement('canvas'); cnv.width = W; cnv.height = H;
-      var ctx = cnv.getContext('2d');
-
-      // Ocean
-      ctx.fillStyle = '#1a3a54';
-      ctx.fillRect(0, 0, W, H);
-
-      // Helper: lon/lat (degrees) → canvas XY
-      function px(lon, lat){ return [(lon+180)/360*W, (90-lat)/180*H]; }
-      function poly(pts, fill, stroke){
-        ctx.beginPath();
-        var p0 = px(pts[0][0], pts[0][1]);
-        ctx.moveTo(p0[0], p0[1]);
-        for (var i=1;i<pts.length;i++){ var p=px(pts[i][0],pts[i][1]); ctx.lineTo(p[0],p[1]); }
-        ctx.closePath();
-        if (fill){ ctx.fillStyle = fill; ctx.fill(); }
-        if (stroke){ ctx.strokeStyle = stroke; ctx.lineWidth=1; ctx.stroke(); }
-      }
-
-      var land = '#2e5e38', coast = '#3a7040';
-
-      // --- North America ---
-      poly([[-168,72],[-140,70],[-95,75],[-80,73],[-65,47],[-52,47],[-64,44],[-70,41],[-75,35],[-80,25],[-87,15],[-77,8],[-83,10],[-90,16],[-105,20],[-110,30],[-117,32],[-124,37],[-124,49],[-122,55],[-130,56],[-137,59],[-145,60],[-152,60],[-165,62],[-168,66]], land, coast);
-      // Greenland
-      poly([[-44,83],[-20,83],[-18,77],[-30,72],[-44,76],[-52,80]], land, coast);
-      // Alaska
-      poly([[-168,60],[-160,55],[-150,58],[-136,58],[-130,55],[-140,52],[-160,53],[-168,58]], land, coast);
-      // --- South America ---
-      poly([[-82,8],[-77,0],[-50,-5],[-35,-8],[-34,-22],[-40,-22],[-52,-33],[-58,-38],[-65,-42],[-67,-55],[-60,-52],[-54,-45],[-50,-29],[-48,-16],[-40,-2],[-50,5],[-60,10],[-70,12],[-77,8]], land, coast);
-
-      // --- Europe ---
-      poly([[0,51],[5,48],[8,48],[15,48],[20,47],[28,46],[30,48],[27,52],[20,55],[15,58],[10,58],[5,60],[0,62],[-5,58],[-8,52],[0,51]], land, coast);
-      // Scandinavia
-      poly([[5,58],[10,58],[15,60],[20,60],[26,65],[28,71],[20,70],[15,70],[10,62],[5,58]], land, coast);
-      // Iberia
-      poly([[-9,37],[-6,36],[0,40],[0,43],[-8,44],[-9,42],[-9,37]], land, coast);
-      // UK
-      poly([[-5,50],[0,51],[2,52],[0,53],[-4,54],[-6,58],[-4,57],[-3,55],[-2,51],[-5,50]], land, coast);
-
-      // --- Africa ---
-      poly([[-5,36],[10,37],[36,37],[36,30],[43,11],[50,11],[44,0],[40,-10],[35,-20],[28,-30],[18,-35],[16,-30],[14,-22],[10,-5],[8,4],[0,5],[-5,5],[-15,12],[-18,20],[-16,30],[-10,36],[-5,36]], land, coast);
-      // Madagascar
-      poly([[44,-12],[48,-13],[50,-18],[48,-24],[44,-25],[43,-18],[44,-12]], land, coast);
-
-      // --- Asia ---
-      poly([[30,42],[40,36],[50,30],[60,22],[80,10],[100,5],[105,5],[110,0],[120,5],[130,10],[140,35],[140,45],[135,55],[120,55],[100,55],[90,55],[80,50],[70,55],[60,55],[50,45],[40,38],[30,42]], land, coast);
-      // Indian subcontinent
-      poly([[68,22],[80,28],[88,28],[92,20],[80,8],[72,8],[66,15],[68,22]], land, coast);
-      // Arabian peninsula
-      poly([[36,30],[44,30],[58,22],[56,12],[44,12],[36,22],[36,30]], land, coast);
-      // Southeast Asia
-      poly([[98,20],[102,22],[105,22],[108,15],[105,10],[100,2],[100,5],[105,5],[110,0],[120,5],[108,5],[100,10],[98,20]], land, coast);
-      // Japan
-      poly([[130,32],[135,34],[140,38],[142,43],[140,45],[136,42],[132,33],[130,32]], land, coast);
-
-      // --- Australia ---
-      poly([[114,-22],[120,-34],[130,-33],[140,-38],[148,-38],[152,-28],[148,-18],[136,-12],[130,-14],[120,-22],[114,-22]], land, coast);
-      // New Zealand (North)
-      poly([[172,-36],[176,-36],[178,-38],[176,-40],[172,-39],[172,-36]], land, coast);
-
-      // --- Antarctica ---
-      poly([[-180,-70],[-120,-68],[-60,-72],[0,-68],[60,-65],[120,-66],[180,-70],[180,-90],[-180,-90]], '#c8e0f0', '#a0c8e8');
-
-      // --- Arctic ice cap ---
-      poly([[-180,75],[-120,73],[-60,72],[0,72],[60,72],[120,73],[180,75],[180,90],[-180,90]], '#d8ecf8', '#b0d4ec');
-
-      // Equator line
-      ctx.beginPath();
-      ctx.moveTo(0, H/2); ctx.lineTo(W, H/2);
-      ctx.strokeStyle = '#c9a44c'; ctx.lineWidth = 3; ctx.stroke();
-
-      // Tropics
-      var tropicY = px(0, 23.5)[1];
-      ctx.beginPath(); ctx.moveTo(0, tropicY); ctx.lineTo(W, tropicY);
-      ctx.strokeStyle = '#8b7340'; ctx.lineWidth = 1.2; ctx.stroke();
-      tropicY = px(0, -23.5)[1];
-      ctx.beginPath(); ctx.moveTo(0, tropicY); ctx.lineTo(W, tropicY);
-      ctx.strokeStyle = '#8b7340'; ctx.lineWidth = 1.2; ctx.stroke();
-
-      // Polar circles
-      var arcticY = px(0, 66.5)[1];
-      ctx.beginPath(); ctx.moveTo(0, arcticY); ctx.lineTo(W, arcticY);
-      ctx.strokeStyle = '#5a88a8'; ctx.lineWidth = 1.2; ctx.stroke();
-      arcticY = px(0, -66.5)[1];
-      ctx.beginPath(); ctx.moveTo(0, arcticY); ctx.lineTo(W, arcticY);
-      ctx.strokeStyle = '#5a88a8'; ctx.lineWidth = 1.2; ctx.stroke();
-
-      // Labels
-      ctx.font = 'bold 22px Georgia, serif';
-      ctx.fillStyle = '#c9a44c';
-      ctx.textAlign = 'left';
-      var eqP = px(2, 0); ctx.fillText('Equator', eqP[0], eqP[1]-4);
-      ctx.fillStyle = '#d8ecf8'; ctx.font = 'bold 18px Georgia, serif';
-      var npP = px(10, 88); ctx.fillText('N', npP[0], npP[1]);
-      var spP = px(10, -84); ctx.fillText('S', spP[0], spP[1]);
-
-      return cnv;
-    }
-
-    var earthCanvas = buildEarthCanvas();
-    var earthTex = new THREE.CanvasTexture(earthCanvas);
-    var earthMat = new THREE.MeshPhongMaterial({ map: earthTex, specular: 0x111111, shininess: 8 });
-    var earth = new THREE.Mesh(new THREE.SphereGeometry(R, 64, 48), earthMat);
-    earthGroup.add(earth);
-
-    // Try to load the high-res texture over the canvas map.
-    var texLoader = new THREE.TextureLoader();
-    texLoader.crossOrigin = 'anonymous';
-    texLoader.load(
-      'https://unpkg.com/three-globe@2.31.1/example/img/earth-blue-marble.jpg',
-      function(tex){
-        earth.material = new THREE.MeshPhongMaterial({ map: tex, specular: 0x222222, shininess: 8 });
-      },
-      undefined,
-      function(){ /* keep canvas map */ }
-    );
-    var atmosphere = new THREE.Mesh(
-      new THREE.SphereGeometry(R*1.035, 48, 32),
-      new THREE.MeshBasicMaterial({ color: 0x6fa3d6, transparent: true, opacity: 0.10, side: THREE.BackSide })
-    );
-    earthGroup.add(atmosphere);
-
-    // Pole markers + labels (sprites, always face camera).
-    function makeLabelSprite(text, color){
-      var cnv = document.createElement('canvas'); cnv.width = 128; cnv.height = 48;
-      var ctx = cnv.getContext('2d');
-      ctx.font = '28px Georgia, serif';
-      ctx.fillStyle = color;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(text, 64, 24);
-      var sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(cnv), transparent: true, depthTest: false }));
-      sprite.scale.set(26, 10, 1);
-      return sprite;
-    }
-    function latLonToVecLocal(latDeg, lonDeg, radius){
-      var lat = latDeg*Math.PI/180, lon = lonDeg*Math.PI/180;
-      return new THREE.Vector3(
-        radius*Math.cos(lat)*Math.cos(lon),
-        radius*Math.sin(lat),
-        -radius*Math.cos(lat)*Math.sin(lon)
-      );
-    }
-    var poleMat = new THREE.MeshBasicMaterial({ color: 0xe8c468 });
-    var northPole = new THREE.Mesh(new THREE.SphereGeometry(1.6, 8, 8), poleMat);
-    northPole.position.copy(latLonToVecLocal(90, 0, R*1.01));
-    earthGroup.add(northPole);
-    var nLabel = makeLabelSprite('N', '#e8c468');
-    nLabel.position.copy(latLonToVecLocal(90, 0, R*1.18));
-    earthGroup.add(nLabel);
-    var southPole = new THREE.Mesh(new THREE.SphereGeometry(1.6, 8, 8), poleMat);
-    southPole.position.copy(latLonToVecLocal(-90, 0, R*1.01));
-    earthGroup.add(southPole);
-    var sLabel = makeLabelSprite('S', '#e8c468');
-    sLabel.position.copy(latLonToVecLocal(-90, 0, R*1.18));
-    earthGroup.add(sLabel);
-
-    function latLonToVec(latDeg, lonDeg, radius){
-      var lat = latDeg*Math.PI/180, lon = lonDeg*Math.PI/180;
-      return new THREE.Vector3(
-        radius*Math.cos(lat)*Math.cos(lon),
-        radius*Math.sin(lat),
-        -radius*Math.cos(lat)*Math.sin(lon)
-      );
-    }
-    scene.add(earthGroup);
+    var scene = base.scene, R = base.R;
 
     var trackGroup = new THREE.Group();
     scene.add(trackGroup);
@@ -3675,102 +4817,30 @@
     var satDot = new THREE.Mesh(new THREE.SphereGeometry(3.2, 16, 16), new THREE.MeshBasicMaterial({ color: 0xffffff }));
     scene.add(satDot);
 
-    // Pulsing glow ring around sat
-    function makeGlowSprite(color, size){
-      var cnv = document.createElement('canvas'); cnv.width = 64; cnv.height = 64;
-      var ctx = cnv.getContext('2d');
-      var grad = ctx.createRadialGradient(32,32,2,32,32,30);
-      grad.addColorStop(0, color);
-      grad.addColorStop(0.4, color.replace('1)', '0.4)'));
-      grad.addColorStop(1, color.replace('1)', '0)'));
-      ctx.fillStyle = grad;
-      ctx.fillRect(0,0,64,64);
-      var mat = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(cnv), transparent: true, depthTest: false, blending: THREE.AdditiveBlending });
-      var sprite = new THREE.Sprite(mat);
-      sprite.scale.set(size, size, 1);
-      return sprite;
-    }
-    var satGlow = makeGlowSprite('rgba(255,220,100,1)', 28);
+    var satGlow = base.makeGlowSprite('rgba(255,220,100,1)', 28);
     scene.add(satGlow);
-    var satPulse = makeGlowSprite('rgba(255,255,200,1)', 18);
+    var satPulse = base.makeGlowSprite('rgba(255,255,200,1)', 18);
     scene.add(satPulse);
 
     // Observer dot
     var obsDot = new THREE.Mesh(new THREE.SphereGeometry(2.2, 12, 12), new THREE.MeshBasicMaterial({ color: 0x6fbf73 }));
-    var obsGlow = makeGlowSprite('rgba(111,191,115,1)', 20);
+    var obsGlow = base.makeGlowSprite('rgba(111,191,115,1)', 20);
     obsDot.visible = false; obsGlow.visible = false;
     scene.add(obsDot); scene.add(obsGlow);
 
-    // Manual orbit camera: separate angle + distance state, with damping
-    // (no OrbitControls in three r128 per environment constraints).
-    var rotX = 0.3, rotY = 0.4, camDist = R*3.2;
-    var velX = 0, velY = 0, dragging = false, lastX = 0, lastY = 0;
-    var minDist = R*1.25, maxDist = R*7;
-
-    canvas.addEventListener('pointerdown', function(e){
-      dragging = true; lastX = e.clientX; lastY = e.clientY; canvas.style.cursor='grabbing';
-      canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId);
-    });
-    window.addEventListener('pointerup', function(){ dragging = false; canvas.style.cursor='grab'; });
-    window.addEventListener('pointercancel', function(){ dragging = false; });
-    window.addEventListener('pointermove', function(e){
-      if (!dragging) return;
-      var dx = (e.clientX - lastX) * 0.006, dy = (e.clientY - lastY) * 0.006;
-      velY = dx; velX = dy;
-      rotY += dx;
-      rotX = Math.max(-1.45, Math.min(1.45, rotX + dy));
-      lastX = e.clientX; lastY = e.clientY;
-    });
-    canvas.addEventListener('wheel', function(e){
-      e.preventDefault();
-      var factor = Math.exp(e.deltaY * 0.0015);
-      camDist = Math.max(minDist, Math.min(maxDist, camDist * factor));
-    }, { passive: false });
-
-    // Pinch-to-zoom on touch.
-    var pinchStart = null;
-    canvas.addEventListener('touchstart', function(e){
-      if (e.touches.length === 2) pinchStart = { d: touchDist(e.touches), dist: camDist };
-    }, { passive: true });
-    canvas.addEventListener('touchmove', function(e){
-      if (e.touches.length === 2 && pinchStart){
-        var d = touchDist(e.touches);
-        camDist = Math.max(minDist, Math.min(maxDist, pinchStart.dist * (pinchStart.d / d)));
-      }
-    }, { passive: true });
-    function touchDist(t){ var dx=t[0].clientX-t[1].clientX, dy=t[0].clientY-t[1].clientY; return Math.sqrt(dx*dx+dy*dy); }
-
-    var _animT = 0;
-    function animate(){
-      requestAnimationFrame(animate);
-      _animT += 0.04;
-      if (!dragging && (velX !== 0 || velY !== 0)){
-        rotY += velY;
-        rotX = Math.max(-1.45, Math.min(1.45, rotX + velX));
-        velY *= 0.92; velX *= 0.92;
-        if (Math.abs(velY) < 0.0002) velY = 0;
-        if (Math.abs(velX) < 0.0002) velX = 0;
-      }
-      // Pulse glow
-      var pulse = 0.6 + 0.4 * Math.sin(_animT);
-      var pulse2 = 0.5 + 0.5 * Math.sin(_animT * 1.6 + 1);
+    base.setTick(function(t){
+      var pulse = 0.6 + 0.4 * Math.sin(t);
+      var pulse2 = 0.5 + 0.5 * Math.sin(t * 1.6 + 1);
       satGlow.material.opacity = 0.55 + 0.35 * pulse;
       satGlow.scale.set(28 + 8*pulse, 28 + 8*pulse, 1);
       satPulse.material.opacity = 0.7 * pulse2;
       satPulse.scale.set(14 + 10*pulse2, 14 + 10*pulse2, 1);
-      // Keep glow on sat position
       satGlow.position.copy(satDot.position);
       satPulse.position.copy(satDot.position);
       obsGlow.position.copy(obsDot.position);
-      camera.position.x = Math.sin(rotY)*Math.cos(rotX)*camDist;
-      camera.position.y = Math.sin(rotX)*camDist;
-      camera.position.z = Math.cos(rotY)*Math.cos(rotX)*camDist;
-      camera.lookAt(0,0,0);
-      renderer.render(scene, camera);
-    }
-    animate();
+    });
 
-    globe = { R: R, latLonToVec: latLonToVec, trackGroup: trackGroup, trackPastGroup: trackPastGroup, trackFutureMat: trackFutureMat, trackPastMat: trackPastMat, satDot: satDot, satGlow: satGlow, satPulse: satPulse, obsDot: obsDot, obsGlow: obsGlow, sunLight: sunLight };
+    globe = { R: R, latLonToVec: base.latLonToVec, trackGroup: trackGroup, trackPastGroup: trackPastGroup, trackFutureMat: trackFutureMat, trackPastMat: trackPastMat, satDot: satDot, satGlow: satGlow, satPulse: satPulse, obsDot: obsDot, obsGlow: obsGlow, sunLight: base.sunLight };
   })();
 
   function drawGlobe(satrec, now){
@@ -3791,23 +4861,21 @@
     var futureMat = globe.trackFutureMat;
     var pastMat = globe.trackPastMat;
 
-    gt.segs.forEach(function(seg){
-      // Within a single contiguous (non-antimeridian-split) segment, further split
-      // at the "now" point so past/future never bridge across a gap.
-      var future = [], past = [];
-      var passedNow = false;
-      seg.forEach(function(p){
-        var v = globe.latLonToVec(p.lat, p.lon, globe.R*1.012);
-        if (p.now) passedNow = true;
-        if (passedNow) future.push(v); else past.push(v);
-      });
-      if (future.length > 1){
-        globe.trackGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(future), futureMat));
-      }
-      if (past.length > 1){
-        globe.trackPastGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(past), pastMat));
-      }
+    // On a sphere there is no antimeridian discontinuity, so use the raw,
+    // unsplit point list (continuous in time) rather than the 2D-map segs.
+    var future = [], past = [];
+    var passedNow = false;
+    gt.pts.forEach(function(p){
+      var v = globe.latLonToVec(p.lat, p.lon, globe.R*1.012);
+      if (p.now) passedNow = true;
+      if (passedNow) future.push(v); else past.push(v);
     });
+    if (future.length > 1){
+      globe.trackGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(future), futureMat));
+    }
+    if (past.length > 1){
+      globe.trackPastGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(past), pastMat));
+    }
 
     if (gt.nowPt){
       var v = globe.latLonToVec(gt.nowPt.lat, gt.nowPt.lon, globe.R*1.018);
@@ -4246,7 +5314,7 @@
       cur.push(pts[i]);
     }
     if (cur.length) segs.push(cur);
-    return { segs: segs, nowPt: pts.find(function(p){ return p.now; }) };
+    return { segs: segs, pts: pts, nowPt: pts.find(function(p){ return p.now; }) };
   }
 
   function drawMap(satrec, now){
@@ -4357,6 +5425,1736 @@
   });
 
   loadCategory(CATEGORIES[0].group);
+})();
+
+// ============================================================
+// AIRCRAFT OVERHEAD — live ADS-B near a chosen place
+// ============================================================
+(function(){
+  var placeInput = document.getElementById('airPlaceInput');
+  var searchBtn = document.getElementById('airSearchBtn');
+  var useLocBtn = document.getElementById('airUseLocBtn');
+  var radiusSelect = document.getElementById('airRadiusSelect');
+  var statusEl = document.getElementById('airStatus');
+  var bodyEl = document.getElementById('airBody');
+  var placeBadgeEl = document.getElementById('airPlaceBadge');
+  var listEl = document.getElementById('airList');
+  var summaryEl = document.getElementById('airSummary');
+  var bandsWrapEl = document.getElementById('airBandsWrap');
+  var bandsBarEl = document.getElementById('airBandsBar');
+  var bandsLegendEl = document.getElementById('airBandsLegend');
+  var filterStatusEl = document.getElementById('airFilterStatus');
+  // Which summary stat the list is currently filtered to, if any: null,
+  // 'airborne', 'ground', 'military', or 'emergency'. Lives outside
+  // renderAircraft so it survives the 8-second auto-refresh.
+  var activeFilter = null;
+  if (!placeInput || !searchBtn) return;
+
+  var pollTimer = null;
+  var currentPlace = null; // { lat, lon, label }
+
+  function setStatus(msg, cls){
+    statusEl.textContent = msg;
+    statusEl.className = 'air-status' + (cls ? ' ' + cls : '');
+  }
+
+  function haversineKm(lat1, lon1, lat2, lon2){
+    var R = 6371;
+    var dLat = (lat2-lat1) * Math.PI/180;
+    var dLon = (lon2-lon1) * Math.PI/180;
+    var a = Math.sin(dLat/2)*Math.sin(dLat/2) +
+            Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180) *
+            Math.sin(dLon/2)*Math.sin(dLon/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+  function bearingDeg(lat1, lon1, lat2, lon2){
+    var y = Math.sin((lon2-lon1)*Math.PI/180) * Math.cos(lat2*Math.PI/180);
+    var x = Math.cos(lat1*Math.PI/180)*Math.sin(lat2*Math.PI/180) -
+            Math.sin(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.cos((lon2-lon1)*Math.PI/180);
+    return (Math.atan2(y, x) * 180/Math.PI + 360) % 360;
+  }
+  function compassPoint(deg){
+    var pts = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+    return pts[Math.round(deg / 22.5) % 16];
+  }
+
+  // ── Unit conversions, used throughout the aircraft detail panel ──
+  function ktToKmh(kt){ return kt * 1.852; }
+  function ktToMph(kt){ return kt * 1.15078; }
+  function ftToM(ft){ return ft * 0.3048; }
+  function fpmToMs(fpm){ return fpm * 0.00508; }
+  function kmToMi(km){ return km * 0.621371; }
+  // Speed of sound varies with altitude (air gets colder, sound travels slower up to
+  // the tropopause). A short lookup beats a single sea-level constant for high-altitude
+  // cruise, where most ADS-B traffic actually sits.
+  function speedOfSoundKt(altFt){
+    var a = typeof altFt === 'number' ? altFt : 0;
+    var tempC = a <= 36089 ? 15 - 1.98 * (a / 1000) : -56.5; // ISA model, troposphere then isothermal
+    var tempK = tempC + 273.15;
+    var aMs = 20.05 * Math.sqrt(tempK); // speed of sound in m/s for dry air
+    return aMs * 1.943844; // m/s -> knots
+  }
+  // Derive Mach from true airspeed when the feed doesn't report it directly
+  // (many non-airliner feeds omit ac.mach even though tas is present).
+  function estimateMach(tasKt, altFt){
+    if (typeof tasKt !== 'number') return null;
+    var a = speedOfSoundKt(altFt);
+    if (!a) return null;
+    return tasKt / a;
+  }
+
+  function geocode(query){
+    setStatus('looking up that place\u2026');
+    var url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(query);
+    return fetch(url, { headers: { 'Accept': 'application/json' } })
+      .then(function(r){ if (!r.ok) throw new Error('geocoding service unreachable'); return r.json(); })
+      .then(function(arr){
+        if (!arr || !arr.length) throw new Error('could not find that place');
+        return { lat: parseFloat(arr[0].lat), lon: parseFloat(arr[0].lon), label: arr[0].display_name };
+      });
+  }
+
+  function fetchAircraft(lat, lon, radiusKm){
+    // airplanes.live: free, keyless ADS-B aggregation. Radius parameter is nautical miles, max 250.
+    var radiusNm = Math.max(1, Math.min(250, Math.round((radiusKm || 40) / 1.852)));
+    var url = 'https://api.airplanes.live/v2/point/' + lat.toFixed(4) + '/' + lon.toFixed(4) + '/' + radiusNm;
+    return fetch(url).then(function(r){
+      if (!r.ok) throw new Error('aircraft feed unreachable');
+      return r.json();
+    }).then(function(data){ return data && data.ac ? data.ac : []; });
+  }
+
+  var SRC_LABELS = {
+    adsb_icao: 'ADS-B', adsb_icao_nt: 'ADS-B (non-transponder)', adsr_icao: 'ADS-R',
+    tisb_icao: 'TIS-B', adsc: 'ADS-C (satellite)', mlat: 'MLAT', other: 'other',
+    mode_s: 'Mode S (no position)', adsb_other: 'ADS-B (anon.)', adsr_other: 'ADS-R (anon.)',
+    tisb_other: 'TIS-B (anon.)', tisb_trackfile: 'radar track'
+  };
+  var CAT_LABELS = {
+    A1:'light', A2:'small', A3:'large', A4:'large (high vortex)', A5:'heavy',
+    A6:'high performance', A7:'rotorcraft', B1:'glider', B2:'lighter-than-air',
+    B3:'parachutist', B4:'ultralight', B6:'UAV/drone', B7:'spacecraft',
+    C1:'surface emergency vehicle', C2:'surface service vehicle', C3:'ground obstruction'
+  };
+
+  // ICAO 3-letter airline designators -> common name. Curated, not exhaustive:
+  // weighted toward Indian and major international carriers likely to appear
+  // in this tracker. Unrecognised prefixes fall back to showing the raw code.
+  var AIRLINE_NAMES = {
+    IGO:'IndiGo', AIC:'Air India', AXB:'Air India Express', SEJ:'SpiceJet',
+    GOW:'Go First', VTI:'Vistara', LLR:'Alliance Air', DKN:'Akasa Air',
+    BAW:'British Airways', AAL:'American Airlines', UAL:'United Airlines',
+    DAL:'Delta Air Lines', UAE:'Emirates', QTR:'Qatar Airways', ETD:'Etihad Airways',
+    SVA:'Saudia', THY:'Turkish Airlines', SIA:'Singapore Airlines', CPA:'Cathay Pacific',
+    ANA:'All Nippon Airways', JAL:'Japan Airlines', KAL:'Korean Air', AFR:'Air France',
+    DLH:'Lufthansa', KLM:'KLM', SWR:'Swiss', AZA:'ITA Airways', IBE:'Iberia',
+    FIN:'Finnair', AUA:'Austrian Airlines', LOT:'LOT Polish Airlines', AFL:'Aeroflot',
+    CSN:'China Southern', CES:'China Eastern', CCA:'Air China', MAS:'Malaysia Airlines',
+    THA:'Thai Airways', GIA:'Garuda Indonesia', PIA:'Pakistan International Airlines',
+    UBG:'Biman Bangladesh', RBA:'Royal Brunei', SLK:'SriLankan Airlines', MEA:'Middle East Airlines',
+    OMA:'Oman Air', GFA:'Gulf Air', KAC:'Kuwait Airways', RJA:'Royal Jordanian',
+    ELY:'El Al', FDX:'FedEx Express', UPS:'UPS Airlines', GTI:'Atlas Air',
+    QFA:'Qantas', ANZ:'Air New Zealand', VOZ:'Virgin Australia', JST:'Jetstar',
+    EZY:'easyJet', RYR:'Ryanair', WZZ:'Wizz Air', VIR:'Virgin Atlantic',
+    ACA:'Air Canada', WJA:'WestJet', AMX:'Aeromexico', LAN:'LATAM',
+    ASA:'Alaska Airlines', SWA:'Southwest Airlines', JBU:'JetBlue', FFT:'Frontier Airlines',
+    NKS:'Spirit Airlines', HAL:'Hawaiian Airlines'
+  };
+  function airlineFromCallsign(callsign){
+    if (!callsign || callsign === '\u2014') return null;
+    var prefix = callsign.trim().slice(0, 3).toUpperCase();
+    return AIRLINE_NAMES[prefix] || null;
+  }
+
+  // ICAO aircraft type designators (Doc 8643) -> common name. Curated to the
+  // types most likely to appear; unrecognised codes fall back to the raw code.
+  var AIRCRAFT_TYPES = {
+    A19N:'Airbus A319neo', A20N:'Airbus A320neo', A21N:'Airbus A321neo',
+    A319:'Airbus A319', A320:'Airbus A320', A321:'Airbus A321',
+    A332:'Airbus A330-200', A333:'Airbus A330-300', A338:'Airbus A330-800',
+    A339:'Airbus A330-900', A342:'Airbus A340-200', A343:'Airbus A340-300',
+    A346:'Airbus A340-600', A359:'Airbus A350-900', A35K:'Airbus A350-1000',
+    A388:'Airbus A380-800',
+    B736:'Boeing 737-600', B737:'Boeing 737-700', B738:'Boeing 737-800', B739:'Boeing 737-900',
+    B37M:'Boeing 737 MAX 7', B38M:'Boeing 737 MAX 8', B39M:'Boeing 737 MAX 9', B3XM:'Boeing 737 MAX 10',
+    B744:'Boeing 747-400', B748:'Boeing 747-8',
+    B752:'Boeing 757-200', B753:'Boeing 757-300',
+    B762:'Boeing 767-200', B763:'Boeing 767-300', B764:'Boeing 767-400',
+    B772:'Boeing 777-200', B773:'Boeing 777-300', B77L:'Boeing 777-200LR', B77W:'Boeing 777-300ER',
+    B778:'Boeing 777-8', B779:'Boeing 777-9',
+    B788:'Boeing 787-8', B789:'Boeing 787-9', B78X:'Boeing 787-10',
+    E170:'Embraer E170', E175:'Embraer E175', E190:'Embraer E190', E195:'Embraer E195',
+    E290:'Embraer E190-E2', E295:'Embraer E195-E2',
+    AT72:'ATR 72', AT75:'ATR 72-500', AT76:'ATR 72-600', AT43:'ATR 42', AT45:'ATR 42-500',
+    DH8D:'Bombardier Dash 8 Q400', CRJ2:'Bombardier CRJ200', CRJ7:'Bombardier CRJ700', CRJ9:'Bombardier CRJ900',
+    C56X:'Cessna Citation Excel/XLS', C68A:'Cessna Citation Latitude', C25A:'Cessna Citation CJ2',
+    GLF6:'Gulfstream G650', GLF5:'Gulfstream G550', GLF4:'Gulfstream G450',
+    F2TH:'Dassault Falcon 2000', FA7X:'Dassault Falcon 7X',
+    PC12:'Pilatus PC-12', SF34:'Saab 340', B350:'Beechcraft King Air 350',
+    A124:'Antonov An-124', A225:'Antonov An-225', IL76:'Ilyushin Il-76',
+    C130:'Lockheed C-130 Hercules', C17:'Boeing C-17 Globemaster III'
+  };
+  function expandAircraftType(code){
+    if (!code) return null;
+    var c = code.trim().toUpperCase();
+    return AIRCRAFT_TYPES[c] || null;
+  }
+
+  // ---- Route (origin/destination) + aircraft photo, via hexdb.io ----
+  // Free, keyless. Route data depends on the flight having a public schedule
+  // entry; private/GA/military aircraft will usually have none, and that is
+  // shown honestly rather than guessed. Cached per callsign since this
+  // information does not change between 8-second position refreshes.
+  var routeCache = {};   // callsign -> {route, origin, destination} | 'pending' | 'none'
+  var photoCache = {};   // hex -> {url, credit} | 'pending' | 'none'
+
+  function fetchPhoto(hex){
+    if (!hex) return Promise.resolve(null);
+    var key = hex.trim().toLowerCase();
+    if (photoCache[key] && photoCache[key] !== 'pending') return Promise.resolve(photoCache[key]);
+    if (photoCache[key] === 'pending') return Promise.resolve(null);
+    photoCache[key] = 'pending';
+    return fetch('https://hexdb.io/api/v1/aircraft/' + encodeURIComponent(key) + '/photo')
+      .then(function(r){ if (!r.ok) throw new Error('no photo'); return r.json(); })
+      .then(function(data){
+        if (!data || !data.image){ photoCache[key] = 'none'; return null; }
+        var result = { url: data.image, credit: data.photographer || null, link: data.link || null };
+        photoCache[key] = result;
+        return result;
+      })
+      .catch(function(){ photoCache[key] = 'none'; return null; });
+  }
+
+  // ---- Airport lookup: IATA (3-letter) and ICAO (4-letter) codes ----
+  // Embedded table — no network request needed. Covers ~300 major airports worldwide.
+  var AIRPORTS = {
+    // ── Middle East ──
+    DXB:{n:'Dubai International',c:'Dubai',la:25.2528,lo:55.3644},
+    AUH:{n:'Abu Dhabi International',c:'Abu Dhabi',la:24.4330,lo:54.6511},
+    DOH:{n:'Hamad International',c:'Doha',la:25.2731,lo:51.6080},
+    KWI:{n:'Kuwait International',c:'Kuwait City',la:29.2267,lo:47.9689},
+    BAH:{n:'Bahrain International',c:'Manama',la:26.2708,lo:50.6336},
+    MCT:{n:'Muscat International',c:'Muscat',la:23.5933,lo:58.2844},
+    RUH:{n:'King Khalid International',c:'Riyadh',la:24.9578,lo:46.6988},
+    JED:{n:'King Abdulaziz International',c:'Jeddah',la:21.6796,lo:39.1565},
+    DMM:{n:'King Fahd International',c:'Dammam',la:26.4712,lo:49.7979},
+    AMM:{n:'Queen Alia International',c:'Amman',la:31.7226,lo:35.9932},
+    BEY:{n:'Rafic Hariri International',c:'Beirut',la:33.8209,lo:35.4884},
+    DAM:{n:'Damascus International',c:'Damascus',la:33.4115,lo:36.5156},
+    BGW:{n:'Baghdad International',c:'Baghdad',la:33.2625,lo:44.2346},
+    ISU:{n:'Sulaymaniyah International',c:'Sulaymaniyah',la:35.5608,lo:45.3167},
+    EBL:{n:'Erbil International',c:'Erbil',la:36.2376,lo:43.9632},
+    THR:{n:'Mehrabad International',c:'Tehran',la:35.6892,lo:51.3134},
+    IKA:{n:'Imam Khomeini International',c:'Tehran',la:35.4161,lo:51.1522},
+    TLV:{n:'Ben Gurion International',c:'Tel Aviv',la:32.0055,lo:34.8854},
+    SAH:{n:'Sanaa International',c:'Sanaa',la:15.4763,lo:44.2197},
+    // ── Africa ──
+    CAI:{n:'Cairo International',c:'Cairo',la:30.1219,lo:31.4056},
+    LOS:{n:'Murtala Muhammed International',c:'Lagos',la:6.5774,lo:3.3212},
+    NBO:{n:'Jomo Kenyatta International',c:'Nairobi',la:-1.3192,lo:36.9275},
+    ADD:{n:'Addis Ababa Bole International',c:'Addis Ababa',la:8.9779,lo:38.7993},
+    ACC:{n:'Kotoka International',c:'Accra',la:5.6052,lo:-0.1668},
+    ABJ:{n:'Félix-Houphouët-Boigny International',c:'Abidjan',la:5.2613,lo:-3.9263},
+    DAK:{n:'Dakar Léopold Sédar Senghor',c:'Dakar',la:14.7397,lo:-17.4902},
+    CMN:{n:'Mohammed V International',c:'Casablanca',la:33.3675,lo:-7.5898},
+    ALG:{n:'Houari Boumediene Airport',c:'Algiers',la:36.6910,lo:3.2154},
+    TUN:{n:'Tunis-Carthage International',c:'Tunis',la:36.8510,lo:10.2272},
+    TRI:{n:'Mitiga International',c:'Tripoli',la:32.8942,lo:13.2760},
+    JNB:{n:'O.R. Tambo International',c:'Johannesburg',la:-26.1367,lo:28.2411},
+    CPT:{n:'Cape Town International',c:'Cape Town',la:-33.9648,lo:18.6017},
+    DUR:{n:'King Shaka International',c:'Durban',la:-29.6144,lo:31.1197},
+    DAR:{n:'Julius Nyerere International',c:'Dar es Salaam',la:-6.8781,lo:39.2026},
+    EBB:{n:'Entebbe International',c:'Entebbe',la:0.0424,lo:32.4435},
+    KGL:{n:'Kigali International',c:'Kigali',la:-1.9686,lo:30.1395},
+    LUN:{n:'Kenneth Kaunda International',c:'Lusaka',la:-15.3308,lo:28.4526},
+    HRE:{n:'Robert Gabriel Mugabe International',c:'Harare',la:-17.9318,lo:31.0928},
+    MRU:{n:'Sir Seewoosagur Ramgoolam International',c:'Mauritius',la:-20.4302,lo:57.6836},
+    TNR:{n:'Ivato International',c:'Antananarivo',la:-18.7969,lo:47.4788},
+    // ICAO codes for Africa
+    HAAB:{n:'Addis Ababa Bole International',c:'Addis Ababa',la:8.9779,lo:38.7993},
+    HKJK:{n:'Jomo Kenyatta International',c:'Nairobi',la:-1.3192,lo:36.9275},
+    DNMM:{n:'Murtala Muhammed International',c:'Lagos',la:6.5774,lo:3.3212},
+    HECA:{n:'Cairo International',c:'Cairo',la:30.1219,lo:31.4056},
+    FACT:{n:'Cape Town International',c:'Cape Town',la:-33.9648,lo:18.6017},
+    FAOR:{n:'O.R. Tambo International',c:'Johannesburg',la:-26.1367,lo:28.2411},
+    HTDA:{n:'Julius Nyerere International',c:'Dar es Salaam',la:-6.8781,lo:39.2026},
+    HUEN:{n:'Entebbe International',c:'Entebbe',la:0.0424,lo:32.4435},
+    HRYR:{n:'Kigali International',c:'Kigali',la:-1.9686,lo:30.1395},
+    // ── Europe ──
+    LHR:{n:'London Heathrow',c:'London',la:51.4775,lo:-0.4614},
+    LGW:{n:'London Gatwick',c:'London',la:51.1537,lo:-0.1821},
+    STN:{n:'London Stansted',c:'London',la:51.8850,lo:0.2350},
+    CDG:{n:'Charles de Gaulle',c:'Paris',la:49.0097,lo:2.5479},
+    ORY:{n:'Paris Orly',c:'Paris',la:48.7233,lo:2.3794},
+    AMS:{n:'Amsterdam Schiphol',c:'Amsterdam',la:52.3086,lo:4.7639},
+    FRA:{n:'Frankfurt Airport',c:'Frankfurt',la:50.0379,lo:8.5622},
+    MUC:{n:'Munich Airport',c:'Munich',la:48.3537,lo:11.7750},
+    MAD:{n:'Adolfo Suárez Madrid-Barajas',c:'Madrid',la:40.4936,lo:-3.5668},
+    BCN:{n:'Barcelona El Prat',c:'Barcelona',la:41.2971,lo:2.0785},
+    FCO:{n:'Leonardo da Vinci (Fiumicino)',c:'Rome',la:41.8003,lo:12.2389},
+    MXP:{n:'Milan Malpensa',c:'Milan',la:45.6306,lo:8.7281},
+    ZRH:{n:'Zürich Airport',c:'Zurich',la:47.4647,lo:8.5492},
+    GVA:{n:'Geneva Airport',c:'Geneva',la:46.2381,lo:6.1089},
+    VIE:{n:'Vienna International',c:'Vienna',la:48.1103,lo:16.5697},
+    BRU:{n:'Brussels Airport',c:'Brussels',la:50.9014,lo:4.4844},
+    CPH:{n:'Copenhagen Airport',c:'Copenhagen',la:55.6180,lo:12.6508},
+    ARN:{n:'Stockholm Arlanda',c:'Stockholm',la:59.6519,lo:17.9186},
+    OSL:{n:'Oslo Gardermoen',c:'Oslo',la:60.1939,lo:11.1004},
+    HEL:{n:'Helsinki-Vantaa',c:'Helsinki',la:60.3172,lo:24.9633},
+    WAW:{n:'Warsaw Chopin',c:'Warsaw',la:52.1657,lo:20.9671},
+    PRG:{n:'Prague Václav Havel',c:'Prague',la:50.1008,lo:14.2600},
+    BUD:{n:'Budapest Ferenc Liszt International',c:'Budapest',la:47.4298,lo:19.2611},
+    ATH:{n:'Athens International (Eleftherios Venizelos)',c:'Athens',la:37.9364,lo:23.9445},
+    IST:{n:'Istanbul Airport',c:'Istanbul',la:41.2608,lo:28.7418},
+    SAW:{n:'Istanbul Sabiha Gökçen',c:'Istanbul',la:40.8983,lo:29.3092},
+    SVO:{n:'Sheremetyevo International',c:'Moscow',la:55.9726,lo:37.4146},
+    DME:{n:'Domodedovo International',c:'Moscow',la:55.4088,lo:37.9063},
+    LED:{n:'Pulkovo Airport',c:'St Petersburg',la:59.8003,lo:30.2625},
+    LIS:{n:'Humberto Delgado Airport',c:'Lisbon',la:38.7742,lo:-9.1342},
+    OPO:{n:'Francisco Sá Carneiro Airport',c:'Porto',la:41.2481,lo:-8.6814},
+    DUB:{n:'Dublin Airport',c:'Dublin',la:53.4213,lo:-6.2700},
+    // ICAO Europe
+    EGLL:{n:'London Heathrow',c:'London',la:51.4775,lo:-0.4614},
+    EGKK:{n:'London Gatwick',c:'London',la:51.1537,lo:-0.1821},
+    LFPG:{n:'Charles de Gaulle',c:'Paris',la:49.0097,lo:2.5479},
+    EHAM:{n:'Amsterdam Schiphol',c:'Amsterdam',la:52.3086,lo:4.7639},
+    EDDF:{n:'Frankfurt Airport',c:'Frankfurt',la:50.0379,lo:8.5622},
+    EDDM:{n:'Munich Airport',c:'Munich',la:48.3537,lo:11.7750},
+    LEMD:{n:'Adolfo Suárez Madrid-Barajas',c:'Madrid',la:40.4936,lo:-3.5668},
+    LIRF:{n:'Leonardo da Vinci (Fiumicino)',c:'Rome',la:41.8003,lo:12.2389},
+    LSZH:{n:'Zürich Airport',c:'Zurich',la:47.4647,lo:8.5492},
+    LOWW:{n:'Vienna International',c:'Vienna',la:48.1103,lo:16.5697},
+    EKCH:{n:'Copenhagen Airport',c:'Copenhagen',la:55.6180,lo:12.6508},
+    ESSA:{n:'Stockholm Arlanda',c:'Stockholm',la:59.6519,lo:17.9186},
+    ENGM:{n:'Oslo Gardermoen',c:'Oslo',la:60.1939,lo:11.1004},
+    EFHK:{n:'Helsinki-Vantaa',c:'Helsinki',la:60.3172,lo:24.9633},
+    LTFM:{n:'Istanbul Airport',c:'Istanbul',la:41.2608,lo:28.7418},
+    UUEE:{n:'Sheremetyevo International',c:'Moscow',la:55.9726,lo:37.4146},
+    LPPT:{n:'Humberto Delgado Airport',c:'Lisbon',la:38.7742,lo:-9.1342},
+    EIDW:{n:'Dublin Airport',c:'Dublin',la:53.4213,lo:-6.2700},
+    // ── North America ──
+    JFK:{n:'John F. Kennedy International',c:'New York',la:40.6413,lo:-73.7781},
+    LGA:{n:'LaGuardia Airport',c:'New York',la:40.7769,lo:-73.8740},
+    EWR:{n:'Newark Liberty International',c:'Newark',la:40.6895,lo:-74.1745},
+    LAX:{n:'Los Angeles International',c:'Los Angeles',la:33.9425,lo:-118.4081},
+    ORD:{n:"O'Hare International",c:'Chicago',la:41.9742,lo:-87.9073},
+    MDW:{n:'Chicago Midway International',c:'Chicago',la:41.7868,lo:-87.7522},
+    ATL:{n:'Hartsfield-Jackson Atlanta International',c:'Atlanta',la:33.6407,lo:-84.4277},
+    DFW:{n:'Dallas/Fort Worth International',c:'Dallas',la:32.8998,lo:-97.0403},
+    DEN:{n:'Denver International',c:'Denver',la:39.8561,lo:-104.6737},
+    SFO:{n:'San Francisco International',c:'San Francisco',la:37.6213,lo:-122.3790},
+    SEA:{n:'Seattle-Tacoma International',c:'Seattle',la:47.4502,lo:-122.3088},
+    MIA:{n:'Miami International',c:'Miami',la:25.7959,lo:-80.2870},
+    BOS:{n:'Boston Logan International',c:'Boston',la:42.3656,lo:-71.0096},
+    IAD:{n:'Washington Dulles International',c:'Washington',la:38.9531,lo:-77.4565},
+    DCA:{n:'Reagan National Airport',c:'Washington',la:38.8521,lo:-77.0377},
+    YYZ:{n:'Toronto Pearson International',c:'Toronto',la:43.6777,lo:-79.6248},
+    YVR:{n:'Vancouver International',c:'Vancouver',la:49.1967,lo:-123.1815},
+    YUL:{n:'Montreal-Pierre Elliott Trudeau International',c:'Montreal',la:45.4706,lo:-73.7408},
+    MEX:{n:'Benito Juárez International',c:'Mexico City',la:19.4363,lo:-99.0721},
+    // ICAO North America
+    KJFK:{n:'John F. Kennedy International',c:'New York',la:40.6413,lo:-73.7781},
+    KLAX:{n:'Los Angeles International',c:'Los Angeles',la:33.9425,lo:-118.4081},
+    KORD:{n:"O'Hare International",c:'Chicago',la:41.9742,lo:-87.9073},
+    KATL:{n:'Hartsfield-Jackson Atlanta International',c:'Atlanta',la:33.6407,lo:-84.4277},
+    KDFW:{n:'Dallas/Fort Worth International',c:'Dallas',la:32.8998,lo:-97.0403},
+    KDEN:{n:'Denver International',c:'Denver',la:39.8561,lo:-104.6737},
+    KSFO:{n:'San Francisco International',c:'San Francisco',la:37.6213,lo:-122.3790},
+    KSEA:{n:'Seattle-Tacoma International',c:'Seattle',la:47.4502,lo:-122.3088},
+    KMIA:{n:'Miami International',c:'Miami',la:25.7959,lo:-80.2870},
+    CYYZ:{n:'Toronto Pearson International',c:'Toronto',la:43.6777,lo:-79.6248},
+    CYVR:{n:'Vancouver International',c:'Vancouver',la:49.1967,lo:-123.1815},
+    MMMX:{n:'Benito Juárez International',c:'Mexico City',la:19.4363,lo:-99.0721},
+    // ── South America ──
+    GRU:{n:'São Paulo–Guarulhos International',c:'São Paulo',la:-23.4356,lo:-46.4731},
+    CGH:{n:'São Paulo Congonhas',c:'São Paulo',la:-23.6261,lo:-46.6564},
+    GIG:{n:'Rio de Janeiro–Galeão International',c:'Rio de Janeiro',la:-22.8099,lo:-43.2505},
+    EZE:{n:'Ministro Pistarini International (Ezeiza)',c:'Buenos Aires',la:-34.8222,lo:-58.5358},
+    BOG:{n:'El Dorado International',c:'Bogotá',la:4.7016,lo:-74.1469},
+    LIM:{n:'Jorge Chávez International',c:'Lima',la:-12.0219,lo:-77.1143},
+    SCL:{n:'Arturo Merino Benítez International',c:'Santiago',la:-33.3930,lo:-70.7858},
+    // ── Asia ──
+    SIN:{n:'Singapore Changi Airport',c:'Singapore',la:1.3644,lo:103.9915},
+    BKK:{n:'Suvarnabhumi Airport',c:'Bangkok',la:13.6900,lo:100.7501},
+    HKG:{n:'Hong Kong International',c:'Hong Kong',la:22.3080,lo:113.9185},
+    PEK:{n:'Beijing Capital International',c:'Beijing',la:40.0799,lo:116.6031},
+    PKX:{n:'Beijing Daxing International',c:'Beijing',la:39.5095,lo:116.4105},
+    PVG:{n:'Shanghai Pudong International',c:'Shanghai',la:31.1443,lo:121.8083},
+    SHA:{n:'Shanghai Hongqiao International',c:'Shanghai',la:31.1979,lo:121.3364},
+    CAN:{n:'Guangzhou Baiyun International',c:'Guangzhou',la:23.3924,lo:113.2988},
+    CTU:{n:'Chengdu Tianfu International',c:'Chengdu',la:30.3125,lo:104.4440},
+    NRT:{n:'Tokyo Narita International',c:'Tokyo',la:35.7720,lo:140.3929},
+    HND:{n:'Tokyo Haneda International',c:'Tokyo',la:35.5494,lo:139.7798},
+    KIX:{n:'Kansai International',c:'Osaka',la:34.4347,lo:135.2440},
+    ICN:{n:'Incheon International',c:'Seoul',la:37.4602,lo:126.4407},
+    GMP:{n:'Gimpo International',c:'Seoul',la:37.5583,lo:126.7906},
+    KUL:{n:'Kuala Lumpur International',c:'Kuala Lumpur',la:2.7456,lo:101.7099},
+    CGK:{n:'Soekarno-Hatta International',c:'Jakarta',la:-6.1256,lo:106.6559},
+    MNL:{n:'Ninoy Aquino International',c:'Manila',la:14.5086,lo:121.0194},
+    DEL:{n:'Indira Gandhi International',c:'New Delhi',la:28.5665,lo:77.1031},
+    BOM:{n:'Chhatrapati Shivaji Maharaj International',c:'Mumbai',la:19.0896,lo:72.8656},
+    MAA:{n:'Chennai International',c:'Chennai',la:12.9900,lo:80.1693},
+    BLR:{n:'Kempegowda International',c:'Bengaluru',la:13.1986,lo:77.7066},
+    HYD:{n:'Rajiv Gandhi International',c:'Hyderabad',la:17.2403,lo:78.4294},
+    CCU:{n:'Netaji Subhas Chandra Bose International',c:'Kolkata',la:22.6547,lo:88.4467},
+    COK:{n:'Cochin International',c:'Kochi',la:10.1520,lo:76.4019},
+    AMD:{n:'Sardar Vallabhbhai Patel International',c:'Ahmedabad',la:23.0772,lo:72.6347},
+    PNQ:{n:'Pune Airport',c:'Pune',la:18.5822,lo:73.9197},
+    GOI:{n:'Goa International (Mopa)',c:'Goa',la:15.7121,lo:73.8441},
+    // ICAO Asia
+    WSSS:{n:'Singapore Changi Airport',c:'Singapore',la:1.3644,lo:103.9915},
+    VTBS:{n:'Suvarnabhumi Airport',c:'Bangkok',la:13.6900,lo:100.7501},
+    VHHH:{n:'Hong Kong International',c:'Hong Kong',la:22.3080,lo:113.9185},
+    ZBAA:{n:'Beijing Capital International',c:'Beijing',la:40.0799,lo:116.6031},
+    ZSPD:{n:'Shanghai Pudong International',c:'Shanghai',la:31.1443,lo:121.8083},
+    RJAA:{n:'Tokyo Narita International',c:'Tokyo',la:35.7720,lo:140.3929},
+    RJTT:{n:'Tokyo Haneda International',c:'Tokyo',la:35.5494,lo:139.7798},
+    RKSI:{n:'Incheon International',c:'Seoul',la:37.4602,lo:126.4407},
+    WMKK:{n:'Kuala Lumpur International',c:'Kuala Lumpur',la:2.7456,lo:101.7099},
+    WIII:{n:'Soekarno-Hatta International',c:'Jakarta',la:-6.1256,lo:106.6559},
+    RPLL:{n:'Ninoy Aquino International',c:'Manila',la:14.5086,lo:121.0194},
+    VIDP:{n:'Indira Gandhi International',c:'New Delhi',la:28.5665,lo:77.1031},
+    VABB:{n:'Chhatrapati Shivaji Maharaj International',c:'Mumbai',la:19.0896,lo:72.8656},
+    VOBL:{n:'Kempegowda International',c:'Bengaluru',la:13.1986,lo:77.7066},
+    // ── Oceania ──
+    SYD:{n:'Sydney Kingsford Smith',c:'Sydney',la:-33.9399,lo:151.1753},
+    MEL:{n:'Melbourne Airport',c:'Melbourne',la:-37.6690,lo:144.8410},
+    BNE:{n:'Brisbane Airport',c:'Brisbane',la:-27.3842,lo:153.1175},
+    PER:{n:'Perth Airport',c:'Perth',la:-31.9403,lo:115.9674},
+    AKL:{n:'Auckland Airport',c:'Auckland',la:-37.0082,lo:174.7850},
+    CHC:{n:'Christchurch International',c:'Christchurch',la:-43.4894,lo:172.5322},
+    // ICAO Oceania
+    YSSY:{n:'Sydney Kingsford Smith',c:'Sydney',la:-33.9399,lo:151.1753},
+    YMML:{n:'Melbourne Airport',c:'Melbourne',la:-37.6690,lo:144.8410},
+    YBBN:{n:'Brisbane Airport',c:'Brisbane',la:-27.3842,lo:153.1175},
+    NZAA:{n:'Auckland Airport',c:'Auckland',la:-37.0082,lo:174.7850},
+    // ── Gulf / UAE ──
+    OMDB:{n:'Dubai International',c:'Dubai',la:25.2528,lo:55.3644},
+    OMDW:{n:'Al Maktoum International (DWC)',c:'Dubai',la:24.8963,lo:55.1614},
+    OMAA:{n:'Abu Dhabi International',c:'Abu Dhabi',la:24.4330,lo:54.6511},
+    OTHH:{n:'Hamad International',c:'Doha',la:25.2731,lo:51.6080},
+    OKBK:{n:'Kuwait International',c:'Kuwait City',la:29.2267,lo:47.9689},
+    OBBI:{n:'Bahrain International',c:'Manama',la:26.2708,lo:50.6336},
+    OOMS:{n:'Muscat International',c:'Muscat',la:23.5933,lo:58.2844},
+    OERK:{n:'King Khalid International',c:'Riyadh',la:24.9578,lo:46.6988},
+    OEJN:{n:'King Abdulaziz International',c:'Jeddah',la:21.6796,lo:39.1565},
+    // ── Singapore aliases ──
+    WSS:{n:'Singapore Changi Airport',c:'Singapore',la:1.3644,lo:103.9915},
+  };
+
+  function lookupAirport(code){
+    if (!code) return null;
+    var k = code.trim().toUpperCase();
+    return AIRPORTS[k] || null;
+  }
+
+  // Renders an origin→destination pair. The raw ICAO code is always the
+  // primary label (it's the ground truth from the route database), but when
+  // that code is one we recognise, a city name is added underneath so a code
+  // like "RJTT" doesn't sit there meaning nothing to the reader.
+  function buildRouteAirportsHtml(origin, destination){
+    function aptSpan(code){
+      var info = lookupAirport(code);
+      var cityBit = info ? '<span class="air-apt-city">' + info.c + '</span>' : '';
+      return '<span class="air-apt"><span class="air-apt-code">' + code + '</span>' + cityBit + '</span>';
+    }
+    return '<span class="air-route-airports">' + aptSpan(origin) + '<span class="air-route-arrow">\u2192</span>' + aptSpan(destination) + '</span>';
+  }
+
+  function fetchRoute(callsign){
+    if (!callsign) return Promise.resolve(null);
+    var key = callsign.trim().toUpperCase();
+    if (routeCache[key] && routeCache[key] !== 'pending') return Promise.resolve(routeCache[key]);
+    if (routeCache[key] === 'pending') return Promise.resolve(null);
+    routeCache[key] = 'pending';
+    return fetch('https://hexdb.io/api/v1/route/icao/' + encodeURIComponent(key))
+      .then(function(r){ if (!r.ok) throw new Error('no route'); return r.json(); })
+      .then(function(data){
+        if (!data || !data.route || data.status === '404'){ routeCache[key] = 'none'; return null; }
+        var parts = data.route.split('-');
+        var result = { route: data.route, origin: parts[0] || null, destination: parts[1] || null };
+        routeCache[key] = result;
+        return result;
+      })
+      .catch(function(){ routeCache[key] = 'none'; return null; });
+  }
+
+  function renderAircraft(lat, lon, list){
+    // airplanes.live returns lat/lon as numbers but occasionally as numeric strings;
+    // accept both. Aircraft with no position at all cannot be distance-sorted.
+    function hasPos(ac){ var la = ac.lat, lo = ac.lon; return (typeof la === 'number' || (typeof la === 'string' && la !== '')) && (typeof lo === 'number' || (typeof lo === 'string' && lo !== '')); }
+    function acLat(ac){ return typeof ac.lat === 'number' ? ac.lat : parseFloat(ac.lat); }
+    function acLon(ac){ return typeof ac.lon === 'number' ? ac.lon : parseFloat(ac.lon); }
+    var positioned = list.filter(hasPos).filter(function(ac){ return !isNaN(acLat(ac)) && !isNaN(acLon(ac)); });
+    if (!positioned.length){
+      listEl.innerHTML = '<div class="air-empty">No aircraft currently broadcasting within range of this point. Try a spot nearer a major airport or flight corridor, or check again shortly \u2014 the sky here may simply be empty right now.</div>';
+      if (summaryEl) summaryEl.style.display = 'none';
+      if (bandsWrapEl) bandsWrapEl.style.display = 'none';
+      if (filterStatusEl) filterStatusEl.style.display = 'none';
+      return;
+    }
+    positioned.sort(function(a, b){
+      return haversineKm(lat, lon, acLat(a), acLon(a)) - haversineKm(lat, lon, acLat(b), acLon(b));
+    });
+    // ── Summary strip across the whole batch ──
+    var nAirborne = 0, nGround = 0, nMil = 0, nEmergency = 0, altSum = 0, altCount = 0, fastest = 0, fastestHex = null;
+    positioned.forEach(function(ac){
+      if (ac.alt_baro === 'ground') nGround++; else nAirborne++;
+      if (typeof ac.dbFlags === 'number' && (ac.dbFlags & 1)) nMil++;
+      if (ac.emergency && ac.emergency !== 'none') nEmergency++;
+      if (typeof ac.alt_baro === 'number'){ altSum += ac.alt_baro; altCount++; }
+      if (typeof ac.gs === 'number' && ac.gs > fastest){ fastest = ac.gs; fastestHex = (ac.hex || '').trim() || null; }
+    });
+    var avgAlt = altCount ? Math.round(altSum / altCount) : null;
+
+    // Scrolls to a single row and briefly flashes it. Shared by the distance
+    // bands further down and the "fastest" summary stat above.
+    function jumpToHex(hex){
+      if (!hex) return;
+      var row = listEl.querySelector('.air-row[data-hex="' + hex + '"]');
+      if (!row) return;
+      if (row.classList.contains('air-row-hidden')){ activeFilter = null; applyFilter(); }
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('air-row-flash');
+      setTimeout(function(){ row.classList.remove('air-row-flash'); }, 1700);
+    }
+
+    // Shows/hides rows to match activeFilter ('airborne' | 'ground' |
+    // 'military' | 'emergency' | null), and keeps the summary buttons and
+    // the status bar in sync. Re-run on every refresh so the filter
+    // survives the 8-second auto-poll instead of resetting.
+    var filterLabels = { airborne: 'airborne', ground: 'on ground', military: 'military', emergency: 'emergency' };
+    function applyFilter(){
+      var rows = listEl.querySelectorAll('.air-row');
+      var shown = 0;
+      rows.forEach(function(row){
+        var match = true;
+        if (activeFilter === 'airborne') match = row.getAttribute('data-ground') !== 'true';
+        else if (activeFilter === 'ground') match = row.getAttribute('data-ground') === 'true';
+        else if (activeFilter === 'military') match = row.getAttribute('data-mil') === 'true';
+        else if (activeFilter === 'emergency') match = row.getAttribute('data-emerg') === 'true';
+        row.classList.toggle('air-row-hidden', !match);
+        if (match) shown++;
+      });
+      if (summaryEl){
+        summaryEl.querySelectorAll('[data-filter]').forEach(function(btn){
+          var on = btn.getAttribute('data-filter') === activeFilter;
+          btn.classList.toggle('active', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      if (filterStatusEl){
+        if (!activeFilter){
+          filterStatusEl.style.display = 'none';
+        } else {
+          filterStatusEl.style.display = '';
+          filterStatusEl.innerHTML = (shown
+              ? 'Showing <strong>' + shown + '</strong> ' + filterLabels[activeFilter] + ' only'
+              : 'No aircraft currently match &mdash; ' + filterLabels[activeFilter] + ' count dropped to zero') +
+            ' &middot; <button type="button" class="air-filter-clear-btn" id="airFilterClearBtn">show all</button>';
+          var clearBtn = document.getElementById('airFilterClearBtn');
+          if (clearBtn) clearBtn.addEventListener('click', function(){ activeFilter = null; applyFilter(); });
+        }
+      }
+    }
+
+    if (summaryEl){
+      var sumBits = [];
+      sumBits.push('<button type="button" class="air-sum-item go clickable" data-filter="airborne" aria-pressed="false"><span class="air-sum-num">' + nAirborne + '</span><span class="air-sum-label">airborne</span></button>');
+      if (nGround) sumBits.push('<button type="button" class="air-sum-item clickable" data-filter="ground" aria-pressed="false"><span class="air-sum-num">' + nGround + '</span><span class="air-sum-label">on ground</span></button>');
+      if (avgAlt !== null) sumBits.push('<div class="air-sum-item"><span class="air-sum-num">' + avgAlt.toLocaleString() + ' ft</span><span class="air-sum-label">avg altitude</span></div>');
+      if (fastest) sumBits.push('<button type="button" class="air-sum-item clickable" data-jump-hex="' + (fastestHex || '') + '" title="Jump to this aircraft"><span class="air-sum-num">' + Math.round(fastest) + ' kt</span><span class="air-sum-label">fastest</span></button>');
+      if (nMil) sumBits.push('<button type="button" class="air-sum-item warn clickable" data-filter="military" aria-pressed="false"><span class="air-sum-num">' + nMil + '</span><span class="air-sum-label">military</span></button>');
+      if (nEmergency) sumBits.push('<button type="button" class="air-sum-item warn clickable" data-filter="emergency" aria-pressed="false"><span class="air-sum-num">' + nEmergency + '</span><span class="air-sum-label">emergency</span></button>');
+      summaryEl.innerHTML = sumBits.join('');
+      summaryEl.style.display = '';
+      summaryEl.querySelectorAll('[data-filter]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var f = btn.getAttribute('data-filter');
+          activeFilter = (activeFilter === f) ? null : f;
+          applyFilter();
+        });
+      });
+      summaryEl.querySelectorAll('[data-jump-hex]').forEach(function(btn){
+        btn.addEventListener('click', function(){ jumpToHex(btn.getAttribute('data-jump-hex')); });
+      });
+    }
+
+    // ── Distance-band breakdown ──
+    // The list itself is sorted nearest-first, which is the right order to
+    // scan in, but it also means a busy airport can put 50+ aircraft within
+    // the first few screenfuls and bury everything farther out. This bar
+    // gives an at-a-glance sense of how the batch is actually spread across
+    // the chosen radius, and each segment jumps straight to its first row.
+    var radiusKmNow = parseInt(radiusSelect.value, 10) || 40;
+    // Five bands scaled to the active radius, not fixed km values, so a 15km
+    // search and a 250km search both get a meaningful spread instead of one
+    // search dumping everything into the first band.
+    var bandEdges = [0, radiusKmNow * 0.1, radiusKmNow * 0.25, radiusKmNow * 0.5, radiusKmNow * 0.75, radiusKmNow];
+    var bandDefs = [0,1,2,3,4].map(function(i){ return { lo: bandEdges[i], hi: bandEdges[i+1] }; });
+    var bandCounts = [0,0,0,0,0];
+    var bandFirstHex = [null,null,null,null,null];
+    positioned.forEach(function(ac){
+      var d = haversineKm(lat, lon, acLat(ac), acLon(ac));
+      var idx = bandDefs.length - 1;
+      for (var bi = 0; bi < bandDefs.length; bi++){
+        if (d <= bandDefs[bi].hi || bi === bandDefs.length - 1){ idx = bi; break; }
+      }
+      bandCounts[idx]++;
+      if (bandFirstHex[idx] === null){
+        var h = (ac.hex || '').trim();
+        if (h) bandFirstHex[idx] = h;
+      }
+    });
+    var totalPositioned = positioned.length;
+    if (bandsWrapEl && bandsBarEl && bandsLegendEl){
+      var nonEmptyBands = bandCounts.filter(function(c){ return c > 0; }).length;
+      if (totalPositioned > 1 && nonEmptyBands > 1){
+        var barHtml = '', legendHtml = '';
+        bandDefs.forEach(function(b, i){
+          var count = bandCounts[i];
+          if (!count) return;
+          var pct = (count / totalPositioned * 100);
+          var hiLabel = (i === bandDefs.length - 1) ? b.hi.toFixed(0) : b.hi.toFixed(0);
+          var rangeLabel = b.lo.toFixed(0) + '\u2013' + hiLabel + ' km';
+          var jumpHex = bandFirstHex[i];
+          barHtml += '<div class="air-band-seg b' + i + '" style="flex-basis:' + pct.toFixed(2) + '%" ' +
+            'data-jump-hex="' + (jumpHex || '') + '" tabindex="' + (jumpHex ? '0' : '-1') + '" role="button" ' +
+            'aria-label="' + count + ' aircraft between ' + rangeLabel + ', click to jump" ' +
+            'title="' + rangeLabel + ' \u00b7 ' + count + ' aircraft"></div>';
+          legendHtml += '<button type="button" class="air-bands-legend-item" data-jump-hex="' + (jumpHex || '') + '">' +
+            '<span class="air-bands-swatch b' + i + '"></span>' +
+            '<span class="air-bands-count">' + count + '</span> within ' + rangeLabel +
+            '</button>';
+        });
+        bandsBarEl.innerHTML = barHtml;
+        bandsLegendEl.innerHTML = legendHtml;
+        bandsWrapEl.style.display = '';
+
+        bandsBarEl.querySelectorAll('[data-jump-hex]').forEach(function(el){
+          el.addEventListener('click', function(){ jumpToHex(el.getAttribute('data-jump-hex')); });
+          el.addEventListener('keydown', function(e){
+            if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); jumpToHex(el.getAttribute('data-jump-hex')); }
+          });
+        });
+        bandsLegendEl.querySelectorAll('[data-jump-hex]').forEach(function(el){
+          el.addEventListener('click', function(){ jumpToHex(el.getAttribute('data-jump-hex')); });
+        });
+      } else {
+        bandsWrapEl.style.display = 'none';
+      }
+    }
+
+    // Remember which rows were open before the refresh, so an 8-second poll
+    // doesn't silently collapse something the person is in the middle of reading.
+    var openHexes = {};
+    listEl.querySelectorAll('.air-row.open').forEach(function(el){ openHexes[el.getAttribute('data-hex')] = true; });
+
+    var rows = positioned.map(function(ac){
+      var dKm = haversineKm(lat, lon, acLat(ac), acLon(ac));
+      var brg = bearingDeg(lat, lon, acLat(ac), acLon(ac));
+      var callsign = (ac.flight || ac.r || ac.hex || '\u2014').trim();
+      var reg = (ac.r || '\u2014').trim();
+      var type = (ac.t || '\u2014').trim();
+      var airline = airlineFromCallsign(ac.flight);
+      var typeFull = expandAircraftType(type);
+
+      var altFt = (typeof ac.alt_baro === 'number') ? ac.alt_baro.toLocaleString() + ' ft'
+                : (ac.alt_baro === 'ground' ? 'on ground' : '\u2014');
+      var altGeomFt = (typeof ac.alt_geom === 'number') ? ac.alt_geom.toLocaleString() + ' ft' : null;
+      var altBaroM = (typeof ac.alt_baro === 'number') ? Math.round(ftToM(ac.alt_baro)).toLocaleString() + ' m' : null;
+      var altGeomM = (typeof ac.alt_geom === 'number') ? Math.round(ftToM(ac.alt_geom)).toLocaleString() + ' m' : null;
+
+      var spdKt = (typeof ac.gs === 'number') ? Math.round(ac.gs) + ' kt' : '\u2014';
+      var spdKmh = (typeof ac.gs === 'number') ? Math.round(ktToKmh(ac.gs)).toLocaleString() + ' km/h' : null;
+      var spdMph = (typeof ac.gs === 'number') ? Math.round(ktToMph(ac.gs)).toLocaleString() + ' mph' : null;
+      var tasKt = (typeof ac.tas === 'number') ? Math.round(ac.tas) + ' kt' : null;
+      var tasKmh = (typeof ac.tas === 'number') ? Math.round(ktToKmh(ac.tas)).toLocaleString() + ' km/h' : null;
+      var tasMph = (typeof ac.tas === 'number') ? Math.round(ktToMph(ac.tas)).toLocaleString() + ' mph' : null;
+      var iasKt = (typeof ac.ias === 'number') ? Math.round(ac.ias) + ' kt' : null;
+      var iasKmh = (typeof ac.ias === 'number') ? Math.round(ktToKmh(ac.ias)).toLocaleString() + ' km/h' : null;
+
+      // Mach: prefer the feed's own figure; otherwise estimate from TAS and
+      // altitude (ISA model), clearly labelled as an estimate either way.
+      var machReported = (typeof ac.mach === 'number') ? ac.mach : null;
+      var machEstimated = (machReported === null && typeof ac.tas === 'number')
+        ? estimateMach(ac.tas, typeof ac.alt_baro === 'number' ? ac.alt_baro : null) : null;
+      var machNum = (machReported !== null) ? machReported.toFixed(2)
+                  : (machEstimated !== null) ? machEstimated.toFixed(2) + ' (est.)' : null;
+
+      var dist = dKm.toFixed(0) + ' km ' + compassPoint(brg);
+      var dMi = kmToMi(dKm);
+
+      // Vertical rate: prefer barometric, fall back to geometric
+      var vrate = (typeof ac.baro_rate === 'number') ? ac.baro_rate : (typeof ac.geom_rate === 'number' ? ac.geom_rate : null);
+      var vrateStr = '\u2014';
+      var vrateMs = null;
+      if (vrate !== null){
+        if (vrate > 150) vrateStr = '\u2191 climbing ' + Math.abs(vrate).toLocaleString() + ' ft/min';
+        else if (vrate < -150) vrateStr = '\u2193 descending ' + Math.abs(vrate).toLocaleString() + ' ft/min';
+        else vrateStr = 'level flight';
+        vrateMs = (fpmToMs(vrate) >= 0 ? '+' : '\u2212') + Math.abs(fpmToMs(vrate)).toFixed(1) + ' m/s';
+      }
+
+      var squawk = ac.squawk ? ac.squawk : null;
+      var emergency = (ac.emergency && ac.emergency !== 'none') ? ac.emergency : null;
+      var category = ac.category ? (CAT_LABELS[ac.category] || ac.category) : null;
+      var military = (typeof ac.dbFlags === 'number' && (ac.dbFlags & 1)) ? true : false;
+
+      var source = ac.type ? (SRC_LABELS[ac.type] || ac.type) : null;
+      var seenS = (typeof ac.seen === 'number') ? ac.seen.toFixed(0) + 's ago' : null;
+      var seenPosS = (typeof ac.seen_pos === 'number') ? ac.seen_pos.toFixed(0) + 's ago' : null;
+      var rssi = (typeof ac.rssi === 'number') ? ac.rssi.toFixed(1) + ' dBFS' : null;
+      var nic = (typeof ac.nic === 'number') ? ac.nic : null;          // navigation integrity category
+      var nac_p = (typeof ac.nac_p === 'number') ? ac.nac_p : null;    // accuracy category, position
+      var messages = (typeof ac.messages === 'number') ? ac.messages.toLocaleString() : null;
+
+      // Nav target altitude / heading (what the autopilot is targeting)
+      var navAlt = (typeof ac.nav_altitude_mcp === 'number') ? ac.nav_altitude_mcp.toLocaleString() + ' ft' : null;
+      var navHdg = (typeof ac.nav_heading === 'number') ? Math.round(ac.nav_heading) + '\u00b0' : null;
+      var navQnh = (typeof ac.nav_qnh === 'number') ? ac.nav_qnh.toFixed(0) + ' hPa' : null;
+
+      // SPI = Special Position Indicator — pilot pressed the ident button, usually at ATC request
+      var spi = (ac.spi === 1 || ac.spi === true);
+      var alert = (ac.alert === 1 || ac.alert === true);
+
+      var subParts = [];
+      if (reg !== '\u2014') subParts.push(reg);
+      if (typeFull) subParts.push(typeFull);
+      else if (type !== '\u2014') subParts.push(type);
+      var subLine = subParts.join(' \u00b7 ');
+
+      var hex = (ac.hex || '').trim();
+      var wasOpen = !!openHexes[hex];
+
+      // Route cache logic (unchanged)
+      var routeKey = ac.flight ? ac.flight.trim().toUpperCase() : null;
+      var cachedRoute = routeKey ? routeCache[routeKey] : null;
+      var routeHtml;
+      if (!routeKey){
+        routeHtml = '<span class="air-route-pending">no callsign</span>';
+      } else if (cachedRoute === 'none'){
+        routeHtml = '<span class="air-route-pending">route unknown</span>';
+      } else if (cachedRoute && cachedRoute !== 'pending'){
+        routeHtml = buildRouteAirportsHtml(cachedRoute.origin, cachedRoute.destination);
+      } else {
+        routeHtml = '<span class="air-route-pending">looking up\u2026</span>';
+      }
+
+      // ── Compass rose SVG ──
+      // needle points in the direction of ac.track (degrees from north, clockwise)
+      var trackDeg = (typeof ac.track === 'number') ? ac.track : 0;
+      var compassSvg = (function(deg){
+        var R = 18; // outer ring radius
+        var cx = 22, cy = 22;
+        // needle tip & tail in local coords, rotated
+        var rad = (deg - 90) * Math.PI / 180; // -90 because SVG 0° is east
+        var sinD = Math.sin(deg * Math.PI / 180);
+        var cosD = Math.cos(deg * Math.PI / 180);
+        // tip of needle (in the heading direction)
+        var tx = cx + (R - 4) * sinD;
+        var ty = cy - (R - 4) * cosD;
+        // tail
+        var bx = cx - (R - 9) * sinD;
+        var by = cy + (R - 9) * cosD;
+        // wings of arrowhead
+        var wx1 = cx + (R - 10) * Math.sin((deg - 20) * Math.PI / 180);
+        var wy1 = cy - (R - 10) * Math.cos((deg - 20) * Math.PI / 180);
+        var wx2 = cx + (R - 10) * Math.sin((deg + 20) * Math.PI / 180);
+        var wy2 = cy - (R - 10) * Math.cos((deg + 20) * Math.PI / 180);
+        // cardinal tick positions
+        function tick(d, len){
+          var sr = Math.sin(d * Math.PI/180), cr = Math.cos(d * Math.PI/180);
+          return 'M' + (cx + (R-1)*sr).toFixed(1) + ',' + (cy - (R-1)*cr).toFixed(1) +
+                 'L' + (cx + (R-1-len)*sr).toFixed(1) + ',' + (cy - (R-1-len)*cr).toFixed(1);
+        }
+        return '<svg class="air-compass-svg" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">' +
+          '<circle cx="' + cx + '" cy="' + cy + '" r="' + R + '" fill="none" stroke="var(--rule-light)" stroke-width="1"/>' +
+          // cardinal ticks
+          '<path d="' + tick(0,4) + tick(90,3) + tick(180,3) + tick(270,3) + '" stroke="var(--rule)" stroke-width="0.8" fill="none"/>' +
+          // N label
+          '<text x="' + cx + '" y="' + (cy - R + 10) + '" text-anchor="middle" dominant-baseline="middle" font-family="Source Code Pro,monospace" font-size="6" fill="var(--muted)">N</text>' +
+          // heading needle (wax/red for the nose)
+          '<line x1="' + bx.toFixed(1) + '" y1="' + by.toFixed(1) + '" x2="' + tx.toFixed(1) + '" y2="' + ty.toFixed(1) + '" stroke="var(--wax)" stroke-width="1.6" stroke-linecap="round"/>' +
+          // arrowhead
+          '<polyline points="' + wx1.toFixed(1) + ',' + wy1.toFixed(1) + ' ' + tx.toFixed(1) + ',' + ty.toFixed(1) + ' ' + wx2.toFixed(1) + ',' + wy2.toFixed(1) + '" fill="none" stroke="var(--wax)" stroke-width="1.2" stroke-linejoin="round"/>' +
+          // centre dot
+          '<circle cx="' + cx + '" cy="' + cy + '" r="1.5" fill="var(--ink-soft)"/>' +
+        '</svg>';
+      })(trackDeg);
+      var hdgShort = (typeof ac.track === 'number') ? Math.round(ac.track) + '\u00b0' : '\u2014';
+
+      // ── Altitude bar (0 = ground, max at ~45 000 ft) ──
+      var altNum = (typeof ac.alt_baro === 'number') ? ac.alt_baro : 0;
+      var altPct = Math.min(100, Math.max(0, altNum / 45000 * 100)).toFixed(0);
+      var isGround = (ac.alt_baro === 'ground');
+      var altBarHtml = isGround ? '' :
+        '<div class="air-alt-bar"><div class="air-alt-fill" style="width:' + altPct + '%"></div></div>';
+
+      // ── Vrate coloured label ──
+      var vrateClass = (vrate === null) ? '' : (vrate > 150 ? ' air-vrate-climb' : (vrate < -150 ? ' air-vrate-desc' : ' air-vrate-level'));
+      var vrateIcon  = (vrate === null) ? '' : (vrate > 150 ? '\u2191 ' : (vrate < -150 ? '\u2193 ' : '\u2014 '));
+      var vrateShort = (vrate === null) ? '\u2014' : (vrate > 150 ? '+' + Math.abs(vrate).toLocaleString() + ' ft/min' : (vrate < -150 ? '\u2212' + Math.abs(vrate).toLocaleString() + ' ft/min' : 'level'));
+
+      // ── Status badges ──
+      var badges = '';
+      if (emergency) badges += '<span class="air-flag-badge emergency">\u26a0 ' + emergency + '</span>';
+      if (military)  badges += '<span class="air-flag-badge mil">mil</span>';
+      if (isGround)  badges += '<span class="air-flag-badge ground">ground</span>';
+
+      // ── Detail panel: grouped into sections so a bigger field set stays readable ──
+      function detailItem(label, val, flag){
+        if (val === null || val === undefined || val === '') return '';
+        return '<div class="air-detail-item"><div class="air-metric-label">' + label + '</div><div class="air-detail-val' + (flag ? ' flag' : '') + '">' + val + '</div></div>';
+      }
+      function detailSection(title, itemsHtml){
+        if (!itemsHtml) return '';
+        return '<div class="air-detail-section"><div class="air-detail-section-title">' + title + '</div><div class="air-detail-grid">' + itemsHtml + '</div></div>';
+      }
+
+      var speedSection =
+        detailItem('Ground speed', spdKt ? spdKt + (spdKmh ? ' \u00b7 ' + spdKmh : '') + (spdMph ? ' \u00b7 ' + spdMph : '') : null) +
+        detailItem('True airspeed', tasKt ? tasKt + (tasKmh ? ' \u00b7 ' + tasKmh : '') + (tasMph ? ' \u00b7 ' + tasMph : '') : null) +
+        detailItem('Indicated airspeed', iasKt ? iasKt + (iasKmh ? ' \u00b7 ' + iasKmh : '') : null) +
+        detailItem('Mach', machNum) +
+        detailItem('Range from search point', dKm.toFixed(0) + ' km \u00b7 ' + dMi.toFixed(0) + ' mi');
+
+      var altSection =
+        detailItem('Barometric altitude', altFt + ((typeof ac.alt_baro === 'number' && altBaroM) ? ' \u00b7 ' + altBaroM : '')) +
+        detailItem('GNSS altitude', altGeomFt ? altGeomFt + (altGeomM ? ' \u00b7 ' + altGeomM : '') : null) +
+        detailItem('Vertical rate', (vrate !== null) ? vrateStr + (vrateMs ? ' \u00b7 ' + vrateMs : '') : null);
+
+      var navSection =
+        detailItem('Autopilot alt. target', navAlt) +
+        detailItem('Autopilot hdg. target', navHdg) +
+        detailItem('QNH setting', navQnh) +
+        detailItem('Squawk', squawk) +
+        detailItem('Category', category ? category.charAt(0).toUpperCase() + category.slice(1) : null);
+
+      var posSection =
+        detailItem('Position source', source) +
+        detailItem('Position age', seenPosS || seenS) +
+        detailItem('Signal strength', rssi) +
+        detailItem('Nav. integrity (NIC)', nic) +
+        detailItem('Position accuracy (NACp)', nac_p) +
+        detailItem('Messages received', messages) +
+        detailItem('ICAO hex', hex ? hex.toUpperCase() : null) +
+        (spi ? detailItem('Transponder', 'IDENT \u2014 pilot pressed', true) : '') +
+        (alert ? detailItem('Transponder', '\u26a0 alert bit set', true) : '');
+
+      var detailGridHtml =
+        detailSection('Speed', speedSection) +
+        detailSection('Altitude &amp; vertical rate', altSection) +
+        detailSection('Navigation', navSection) +
+        detailSection('Position &amp; signal', posSection);
+
+      var mapHref = 'https://www.openstreetmap.org/?mlat=' + acLat(ac).toFixed(4) + '&mlon=' + acLon(ac).toFixed(4) + '#map=9/' + acLat(ac).toFixed(4) + '/' + acLon(ac).toFixed(4);
+
+      return '<div class="air-row' + (wasOpen ? ' open' : '') + '" data-hex="' + hex + '" data-callsign="' + callsign.replace(/"/g,'') + '"' +
+        ' data-ground="' + (ac.alt_baro === 'ground' ? 'true' : 'false') + '"' +
+        ' data-mil="' + (military ? 'true' : 'false') + '"' +
+        ' data-emerg="' + (emergency ? 'true' : 'false') + '">' +
+
+        // ── Identity bar (click target) ──
+        '<div class="air-id-bar" data-air-toggle="' + hex + '" role="button" tabindex="0" aria-expanded="' + (wasOpen ? 'true' : 'false') + '" aria-label="Show full details for ' + callsign.replace(/"/g,'') + '">' +
+          '<span class="air-callsign">' + callsign + '</span>' +
+          (airline ? '<span class="air-airline-name">' + airline + '</span>' : '') +
+          badges +
+          (subLine ? '<span class="air-reg-type">' + subLine + '</span>' : '') +
+          '<span class="air-expand-hint"><span class="air-expand-arrow">\u25be</span>details</span>' +
+        '</div>' +
+
+        // ── Metrics: compass + altitude + speed + range ──
+        '<div class="air-metrics" data-air-toggle="' + hex + '">' +
+
+          // Compass rose
+          '<div class="air-compass-wrap">' +
+            compassSvg +
+            '<div class="air-compass-label">' + hdgShort + '</div>' +
+          '</div>' +
+
+          // Altitude
+          '<div class="air-metric">' +
+            '<div class="air-metric-label">Altitude</div>' +
+            '<div class="air-metric-value">' + altFt + '</div>' +
+            altBarHtml +
+            '<div class="air-metric-sub' + vrateClass + '">' + vrateIcon + vrateShort + '</div>' +
+          '</div>' +
+
+          // Speed
+          '<div class="air-metric air-metric-spd">' +
+            '<div class="air-metric-label">Speed</div>' +
+            '<div class="air-metric-value">' + spdKt + '</div>' +
+            (spdKmh ? '<div class="air-metric-sub">' + spdKmh + '</div>' : '') +
+          '</div>' +
+
+          // Range from search point
+          '<div class="air-metric air-metric-range">' +
+            '<div class="air-metric-label">Range</div>' +
+            '<div class="air-metric-value">' + dKm.toFixed(0) + ' km</div>' +
+            '<div class="air-metric-sub">' + compassPoint(brg) + ' of you</div>' +
+          '</div>' +
+
+        '</div>' +
+
+        // ── Route footer (always visible, kept short) ──
+        '<div class="air-route-line" id="air-route-' + hex + '">' +
+          '<span class="air-route-label">Route</span>' +
+          routeHtml +
+        '</div>' +
+
+        // ── Detail panel (hidden until row is tapped) ──
+        '<div class="air-detail-panel">' +
+          '<div class="air-photo-wrap" id="air-photo-' + hex + '"><span class="air-photo-placeholder">looking for a photo\u2026</span></div>' +
+          '<div class="air-detail-grid">' + detailGridHtml + '</div>' +
+          '<a class="air-map-link" href="' + mapHref + '" target="_blank" rel="noopener">view exact position on a map \u2197</a>' +
+        '</div>' +
+
+      '</div>';
+    });
+    listEl.innerHTML = rows.join('');
+    applyFilter();
+
+    // Click (or Enter/Space when focused) toggles the detail panel for a row.
+    // Delegated once per render rather than one listener per row.
+    listEl.querySelectorAll('[data-air-toggle]').forEach(function(el){
+      function doToggle(){
+        var hex = el.getAttribute('data-air-toggle');
+        var row = listEl.querySelector('.air-row[data-hex="' + hex + '"]');
+        if (!row) return;
+        var nowOpen = row.classList.toggle('open');
+        var idBar = row.querySelector('[role="button"]');
+        if (idBar) idBar.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+        if (nowOpen) loadPhoto(hex);
+      }
+      el.addEventListener('click', doToggle);
+      el.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); doToggle(); }
+      });
+    });
+
+    // Photo loader for the detail panel — fetched lazily, only once a row is
+    // actually opened, so we don't burn requests on aircraft nobody looks at.
+    function loadPhoto(hex){
+      var wrap = document.getElementById('air-photo-' + hex);
+      if (!wrap) return;
+      var cached = photoCache[hex.toLowerCase()];
+      if (cached === 'none'){
+        wrap.innerHTML = '<span class="air-photo-placeholder">no photo on file for this airframe</span>';
+        return;
+      }
+      if (cached && cached !== 'pending'){
+        wrap.innerHTML = '<img src="' + cached.url + '" alt="Photo of aircraft ' + hex.toUpperCase() + '" loading="lazy">' +
+          (cached.credit ? '<div class="air-photo-credit">Photo: ' + cached.credit + '</div>' : '');
+        return;
+      }
+      fetchPhoto(hex).then(function(result){
+        if (!wrap) return;
+        if (result && result.url){
+          wrap.innerHTML = '<img src="' + result.url + '" alt="Photo of aircraft ' + hex.toUpperCase() + '" loading="lazy">' +
+            (result.credit ? '<div class="air-photo-credit">Photo: ' + result.credit + '</div>' : '');
+        } else {
+          wrap.innerHTML = '<span class="air-photo-placeholder">no photo on file for this airframe</span>';
+        }
+      });
+    }
+
+    // Rows that were already open before this refresh (poll cycle) should have
+    // their photo re-attached, since innerHTML replacement wiped the <img>.
+    Object.keys(openHexes).forEach(function(hex){ if (hex) loadPhoto(hex); });
+
+    // Populate route asynchronously per row, without blocking or re-rendering
+    // the list. Each result patches only its own row. Skips anything already
+    // resolved synchronously above from a previous poll.
+    positioned.forEach(function(ac){
+      var hex = (ac.hex || '').trim();
+      if (!hex) return;
+      var routeKey = ac.flight ? ac.flight.trim().toUpperCase() : null;
+      var routeEl = document.getElementById('air-route-' + hex);
+
+      var routeAlreadyResolved = routeKey && routeCache[routeKey] && routeCache[routeKey] !== 'pending';
+      if (ac.flight && routeEl && !routeAlreadyResolved){
+        fetchRoute(ac.flight).then(function(result){
+          if (!routeEl) return;
+          var label = '<span class="air-route-label">Route</span>';
+          if (result && result.origin && result.destination){
+            routeEl.innerHTML = label + buildRouteAirportsHtml(result.origin, result.destination);
+          } else {
+            routeEl.innerHTML = label + '<span class="air-route-pending">route unknown</span>';
+          }
+        });
+      }
+    });
+  }
+
+  function poll(){
+    if (!currentPlace) return;
+    var radiusKm = parseInt(radiusSelect.value, 10);
+    fetchAircraft(currentPlace.lat, currentPlace.lon, radiusKm)
+      .then(function(list){
+        var withPos = list.filter(function(ac){
+          var la = parseFloat(ac.lat), lo = parseFloat(ac.lon);
+          return !isNaN(la) && !isNaN(lo);
+        });
+        var noPos = list.length - withPos.length;
+        var msg = withPos.length + ' aircraft found';
+        if (noPos > 0) msg += ' (' + noPos + ' without position hidden)';
+        msg += ' \u00b7 updated ' + new Date().toLocaleTimeString();
+        setStatus(msg, 'ok');
+        renderAircraft(currentPlace.lat, currentPlace.lon, list);
+      })
+      .catch(function(err){
+        setStatus('aircraft feed unreachable \u2014 ' + err.message, 'err');
+      });
+  }
+
+  function startTracking(place){
+    currentPlace = place;
+    var shortLabel = place.label.split(',').slice(0,2).join(', ');
+    placeBadgeEl.innerHTML = 'Tracking within ' + radiusSelect.value + ' km of <span class="accent">' + shortLabel + '</span>';
+    bodyEl.style.display = '';
+    if (pollTimer) clearInterval(pollTimer);
+    poll();
+    pollTimer = setInterval(poll, 8000);
+  }
+
+  function runSearch(){
+    var q = placeInput.value.trim();
+    if (!q){ setStatus('type a place first', 'err'); return; }
+
+    // Check embedded airport table first (handles both IATA 3-letter and ICAO 4-letter codes)
+    var airport = lookupAirport(q);
+    if (airport){
+      setStatus('found ' + airport.n, 'ok');
+      startTracking({ lat: airport.la, lon: airport.lo, label: airport.n + ', ' + airport.c });
+      return;
+    }
+
+    // Fall through to Nominatim geocoder for city/place names
+    setStatus('looking up\u2026');
+    geocode(q)
+      .then(function(place){
+        setStatus('found ' + place.label.split(',')[0], 'ok');
+        startTracking(place);
+      })
+      .catch(function(err){
+        setStatus(err.message, 'err');
+      });
+  }
+
+  searchBtn.addEventListener('click', runSearch);
+  placeInput.addEventListener('keydown', function(e){ if (e.key === 'Enter') runSearch(); });
+  radiusSelect.addEventListener('change', function(){
+    if (currentPlace){
+      placeBadgeEl.innerHTML = 'Tracking within ' + radiusSelect.value + ' km of <span class="accent">' + currentPlace.label.split(',').slice(0,2).join(', ') + '</span>';
+      poll();
+    }
+  });
+
+  useLocBtn.addEventListener('click', function(){
+    if (!navigator.geolocation){ setStatus('your browser does not support location', 'err'); return; }
+    setStatus('getting your location\u2026');
+    navigator.geolocation.getCurrentPosition(
+      function(pos){
+        var lat = pos.coords.latitude, lon = pos.coords.longitude;
+        placeInput.value = lat.toFixed(3) + ', ' + lon.toFixed(3);
+        setStatus('using your current location', 'ok');
+        startTracking({ lat: lat, lon: lon, label: 'your current location' });
+      },
+      function(){ setStatus('could not get your location \u2014 type a place instead', 'err'); },
+      { timeout: 8000 }
+    );
+  });
+})();
+
+// ---------- Rocket launch tracker ----------
+(function(){
+  var statusEl = document.getElementById('rocketStatus');
+  var gridEl   = document.getElementById('rocketGrid');
+  var viewMoreEl = document.getElementById('rocketViewMoreWrap');
+  if (!statusEl || !gridEl) return;
+
+  function setStatus(msg, cls){
+    statusEl.textContent = msg;
+    statusEl.className = 'rocket-status-line' + (cls ? ' ' + cls : '');
+  }
+
+  // Maps the API's free-text status name to a badge class + short label.
+  function badgeFor(statusName){
+    var s = (statusName || '').toLowerCase();
+    if (s.indexOf('go') === 0)                 return { cls:'go',      label:'Go' };
+    if (s.indexOf('flight') !== -1 || s.indexOf('in flight') !== -1)
+                                                 return { cls:'flight', label:'In Flight' };
+    if (s.indexOf('hold') !== -1)               return { cls:'hold',   label:'Hold' };
+    if (s.indexOf('success') !== -1)            return { cls:'success',label:'Success' };
+    if (s.indexOf('fail') !== -1 || s.indexOf('partial') !== -1)
+                                                 return { cls:'failure',label:'Failure' };
+    if (s.indexOf('tbd') !== -1 || s.indexOf('tbc') !== -1)
+                                                 return { cls:'tbd',    label:'TBD' };
+    return { cls:'tbd', label: statusName || 'Unknown' };
+  }
+
+  function fmtCountdown(ms){
+    if (ms <= 0) return 'liftoff window has opened';
+    var s = Math.floor(ms / 1000);
+    var d = Math.floor(s / 86400); s -= d * 86400;
+    var h = Math.floor(s / 3600);  s -= h * 3600;
+    var m = Math.floor(s / 60);    s -= m * 60;
+    var parts = [];
+    if (d) parts.push(d + 'd');
+    parts.push((h < 10 ? '0' : '') + h + 'h');
+    parts.push((m < 10 ? '0' : '') + m + 'm');
+    parts.push((s < 10 ? '0' : '') + s + 's');
+    return parts.join(' ');
+  }
+
+  function fmtDate(iso){
+    if (!iso) return 'date not yet set';
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return 'date not yet set';
+    return d.toLocaleString(undefined, {
+      day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit'
+    });
+  }
+
+  var launches = []; // cached list from last successful fetch
+  var countdownTimer = null;
+  var DEFAULT_VISIBLE = 6;   // cards shown before "view more" is pressed
+  var FETCH_LIMIT = 50;      // how many upcoming launches to pull from the feed
+  var showAll = false;
+
+  var CACHE_KEY = 'rocket_launches_cache';
+  var CACHE_TTL = 15 * 60 * 1000; // 15 minutes — serve stale data rather than showing an error
+
+  function getCachedLaunches(){
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var obj = JSON.parse(raw);
+      if (Date.now() - obj.ts > CACHE_TTL) return null;
+      return obj.data;
+    } catch(e){ return null; }
+  }
+
+  function setCachedLaunches(data){
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch(e){}
+  }
+
+  function fetchUpcomingLaunches(){
+    var url = 'https://still-lake-50b2.adharshojbuisness2049.workers.dev?url=' + encodeURIComponent('https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=' + FETCH_LIMIT + '&mode=normal');
+    return fetch(url).then(function(r){
+      if (r.status === 429){
+        // Rate limited — serve cache if fresh, otherwise retry once after 5 s
+        var cached = getCachedLaunches();
+        if (cached){ setStatus('launch feed rate-limited — showing cached data', 'ok'); return cached; }
+        return new Promise(function(resolve, reject){
+          setStatus('launch feed rate-limited — retrying in 5s…', 'err');
+          setTimeout(function(){
+            fetch(url).then(function(r2){
+              if (!r2.ok) throw new Error('launch feed unreachable (status ' + r2.status + ')');
+              return r2.json();
+            }).then(function(data){
+              var results = (data && data.results) ? data.results : [];
+              setCachedLaunches(results);
+              resolve(results);
+            }).catch(reject);
+          }, 5000);
+        });
+      }
+      if (!r.ok) throw new Error('launch feed unreachable (status ' + r.status + ')');
+      return r.json();
+    }).then(function(data){
+      if (Array.isArray(data)) return data; // already resolved from cache
+      var results = (data && data.results) ? data.results : [];
+      setCachedLaunches(results);
+      return results;
+    });
+  }
+
+  function render(){
+    if (!launches.length){
+      gridEl.innerHTML = '<div class="rocket-note">No upcoming launches were returned by the feed just now.</div>';
+      return;
+    }
+    var nowMs = Date.now();
+    var cards = launches.map(function(l, idx){
+      var badge = badgeFor(l.status && l.status.name);
+      var netMs = l.net ? new Date(l.net).getTime() : null;
+      var provider = (l.launch_service_provider && l.launch_service_provider.name) || 'Unknown provider';
+      var rocketName = (l.rocket && l.rocket.configuration && l.rocket.configuration.full_name)
+        || (l.rocket && l.rocket.configuration && l.rocket.configuration.name)
+        || '';
+      var pad = l.pad || {};
+      var location = pad.location ? pad.location.name : '';
+      var padName = pad.name || '';
+      var missionDesc = (l.mission && l.mission.description) ? l.mission.description : '';
+      // Trim mission description to a sentence or two — the API field can run long.
+      if (missionDesc.length > 220) missionDesc = missionDesc.slice(0, 217).replace(/\s+\S*$/, '') + '\u2026';
+
+      var countdownHtml = '';
+      if (badge.cls === 'flight'){
+        countdownHtml = '<div class="rocket-countdown"><span class="lbl">Status</span>currently in flight</div>';
+      } else if (netMs){
+        countdownHtml = '<div class="rocket-countdown" data-net="' + netMs + '">' +
+          '<span class="lbl">Countdown to liftoff window</span>' +
+          fmtCountdown(netMs - nowMs) +
+        '</div>';
+      }
+
+      var links = [];
+      if (l.webcast_live && l.vid_urls && l.vid_urls.length && l.vid_urls[0].url){
+        links.push('<a href="' + l.vid_urls[0].url + '" target="_blank" rel="noopener">watch live webcast \u2197</a>');
+      } else if (l.vid_urls && l.vid_urls.length && l.vid_urls[0].url){
+        links.push('<a href="' + l.vid_urls[0].url + '" target="_blank" rel="noopener">webcast link \u2197</a>');
+      }
+      if (l.url){
+        links.push('<a href="https://www.thespacedevs.com/llapi" target="_blank" rel="noopener">data via Launch Library \u2197</a>');
+      }
+
+      return (
+        '<div class="rocket-card' + (idx === 0 ? ' next' : '') + '" data-idx="' + idx + '" tabindex="0" role="button" aria-label="Show ' + (l.name || 'this mission') + ' on the globe">' +
+          '<div class="rocket-card-top">' +
+            '<div>' +
+              '<div class="rocket-name">' + (l.name || 'Unnamed mission') + '</div>' +
+              '<div class="rocket-provider">' + provider + (rocketName ? ' \u00b7 ' + rocketName : '') + '</div>' +
+            '</div>' +
+            '<div class="rocket-badge ' + badge.cls + '">' + badge.label + '</div>' +
+          '</div>' +
+          '<div class="rocket-meta">' +
+            '<div class="rocket-meta-item"><span>Launch window</span><span>' + fmtDate(l.net) + '</span></div>' +
+            '<div class="rocket-meta-item"><span>Site</span><span>' + (padName || location || '\u2014') + '</span></div>' +
+          '</div>' +
+          countdownHtml +
+          (missionDesc ? '<div class="rocket-mission">' + missionDesc + '</div>' : '') +
+          (links.length ? '<div class="rocket-links">' + links.join('') + '</div>' : '') +
+        '</div>'
+      );
+    });
+    gridEl.innerHTML = cards.slice(0, showAll ? cards.length : DEFAULT_VISIBLE).join('');
+    gridEl.querySelectorAll('.rocket-card').forEach(function(card){
+      function pick(){
+        var idx = parseInt(card.getAttribute('data-idx'), 10);
+        if (window.__rocketGlobeSelect) window.__rocketGlobeSelect(launches[idx]);
+      }
+      card.addEventListener('click', pick);
+      card.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); pick(); } });
+    });
+    renderToggle();
+    if (window.__rocketGlobeRebuildPicks) window.__rocketGlobeRebuildPicks();
+    // Auto-select the soonest launch the first time the list loads.
+    if (window.__rocketGlobeSelect && !window.__rocketGlobeHasSelection){
+      window.__rocketGlobeHasSelection = true;
+      window.__rocketGlobeSelect(launches[0]);
+    }
+  }
+
+  function renderToggle(){
+    if (!viewMoreEl) return;
+    var hiddenCount = launches.length - DEFAULT_VISIBLE;
+    if (hiddenCount <= 0){
+      viewMoreEl.innerHTML = '';
+      return;
+    }
+    viewMoreEl.innerHTML = '<button type="button" class="rocket-globe-pick" id="rocketViewMoreBtn">' +
+      (showAll ? 'Show fewer launches' : 'View more launches (' + hiddenCount + ' more)') +
+      '</button>';
+    var btn = document.getElementById('rocketViewMoreBtn');
+    if (btn){
+      btn.addEventListener('click', function(){
+        showAll = !showAll;
+        render();
+        if (showAll){
+          // Scroll the newly revealed cards into view rather than leaving
+          // the user looking at the same six they started with.
+          gridEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  }
+
+  // Re-render the countdown figures every second without re-fetching —
+  // identical pattern to the time scrubber elsewhere on this page.
+  function tickCountdowns(){
+    var nodes = gridEl.querySelectorAll('.rocket-countdown[data-net]');
+    var nowMs = Date.now();
+    nodes.forEach(function(node){
+      var netMs = parseInt(node.getAttribute('data-net'), 10);
+      if (!netMs) return;
+      var lbl = node.querySelector('.lbl');
+      var lblHtml = lbl ? lbl.outerHTML : '<span class="lbl">Countdown to liftoff window</span>';
+      node.innerHTML = lblHtml + fmtCountdown(netMs - nowMs);
+    });
+  }
+
+  function poll(){
+    fetchUpcomingLaunches()
+      .then(function(results){
+        launches = results;
+        window.__rocketLaunchesAll = launches;
+        setStatus(launches.length + ' upcoming launch' + (launches.length === 1 ? '' : 'es') +
+          ' \u00b7 updated ' + new Date().toLocaleTimeString(), 'ok');
+        render();
+      })
+      .catch(function(err){
+        setStatus('launch feed unreachable \u2014 ' + err.message, 'err');
+      });
+    pollPinned();
+  }
+
+  // ---------- Pinned next-launch-per-agency strip ----------
+  // The main list above is strictly chronological, so a country/agency that
+  // launches rarely (e.g. ISRO, a few times a year) can simply not appear
+  // within the next 50 launches worldwide, crowded out by high-cadence
+  // providers like SpaceX. This pins one upcoming launch from each of a
+  // handful of major agencies regardless of where it falls in that list.
+  var pinnedWrapEl = document.getElementById('rocketPinnedWrap');
+  var pinnedRowEl  = document.getElementById('rocketPinnedRow');
+  var AGENCIES = [
+    { search: 'Indian Space Research Organisation', label: 'India \u00b7 ISRO',         flag: '\u{1F1EE}\u{1F1F3}' },
+    { search: 'China Aerospace Science and Technology', label: 'China \u00b7 CASC',      flag: '\u{1F1E8}\u{1F1F3}' },
+    { search: 'Roscosmos',                              label: 'Russia \u00b7 Roscosmos', flag: '\u{1F1F7}\u{1F1FA}' },
+    { search: 'Arianespace',                            label: 'Europe \u00b7 Arianespace', flag: '\u{1F1EA}\u{1F1FA}' },
+    { search: 'Japan Aerospace Exploration Agency',      label: 'Japan \u00b7 JAXA',       flag: '\u{1F1EF}\u{1F1F5}' }
+  ];
+
+  function fetchAgencyNext(agency){
+    var cacheKey = 'rocket_agency_' + agency.search.replace(/\s+/g,'_');
+    var url = 'https://still-lake-50b2.adharshojbuisness2049.workers.dev?url=' + encodeURIComponent('https://ll.thespacedevs.com/2.3.0/launches/upcoming/?search=' + encodeURIComponent(agency.search) + '&limit=1&mode=normal');
+    return fetch(url).then(function(r){
+      if (r.status === 429){
+        // Rate limited — try local cache
+        try {
+          var raw = localStorage.getItem(cacheKey);
+          if (raw){ var obj = JSON.parse(raw); return { agency: agency, launch: obj }; }
+        } catch(e){}
+        return { agency: agency, launch: null };
+      }
+      if (!r.ok) throw new Error('unreachable');
+      return r.json();
+    }).then(function(data){
+      if (data && data.agency) return data; // already resolved from cache
+      var result = (data && data.results && data.results[0]) ? data.results[0] : null;
+      if (result){ try { localStorage.setItem(cacheKey, JSON.stringify(result)); } catch(e){} }
+      return { agency: agency, launch: result };
+    }).catch(function(){
+      return { agency: agency, launch: null };
+    });
+  }
+
+  function renderPinned(items){
+    var withLaunch = items.filter(function(it){ return it.launch; });
+    if (!withLaunch.length){
+      pinnedWrapEl.style.display = 'none';
+      return;
+    }
+    pinnedWrapEl.style.display = '';
+    pinnedRowEl.innerHTML = withLaunch.map(function(it, i){
+      var l = it.launch;
+      var name = l.name || 'Unnamed mission';
+      var when = fmtDate(l.net);
+      return '<button type="button" class="rocket-pinned-chip" data-idx="' + i + '">' +
+        '<span class="agency">' + it.agency.flag + ' ' + it.agency.label + '</span>' +
+        name + ' \u2014 ' + when +
+        '</button>';
+    }).join('');
+    pinnedRowEl.querySelectorAll('.rocket-pinned-chip').forEach(function(btn, i){
+      btn.addEventListener('click', function(){
+        var launch = withLaunch[i].launch;
+        if (window.__rocketGlobeSelect) window.__rocketGlobeSelect(launch);
+      });
+    });
+  }
+
+  var pinnedPollInFlight = false;
+  function pollPinned(){
+    if (!pinnedWrapEl || !pinnedRowEl || pinnedPollInFlight) return;
+    pinnedPollInFlight = true;
+    Promise.all(AGENCIES.map(fetchAgencyNext))
+      .then(function(items){ renderPinned(items); })
+      .catch(function(){ pinnedWrapEl.style.display = 'none'; })
+      .then(function(){ pinnedPollInFlight = false; });
+  }
+
+  poll();
+  setInterval(poll, 5 * 60 * 1000); // refresh schedule every 5 minutes
+  if (countdownTimer) clearInterval(countdownTimer);
+  countdownTimer = setInterval(tickCountdowns, 1000); // tick countdown every second
+})();
+
+// ---------- Rocket launch globe (Three.js) — illustrative trajectory ----------
+(function(){
+  var wrapEl = document.getElementById('rocketGlobeWrap');
+  var captionEl = document.getElementById('rocketGlobeCaption');
+  var pickRowEl = document.getElementById('rocketGlobePickRow');
+  var readoutsEl = document.getElementById('rocketGlobeReadouts');
+  var orbitBadgeEl = document.getElementById('rocketOrbitBadge');
+  var incStatEl = document.getElementById('rocketIncStat');
+  var durStatEl = document.getElementById('rocketDurStat');
+  if (!wrapEl || typeof THREE === 'undefined' || typeof buildEarthGlobe === 'undefined') return;
+
+  // Known spaceport coordinates, keyed by substrings likely to appear in the
+  // API's pad/location names. Checked in order; first match wins. Covers the
+  // sites responsible for the large majority of orbital launch traffic.
+  var SITES = [
+    { key: 'cape canaveral',      lat: 28.49,  lon: -80.58, name: 'Cape Canaveral, Florida', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'kennedy',             lat: 28.57,  lon: -80.65, name: 'Kennedy Space Center, Florida', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'vandenberg',          lat: 34.63,  lon: -120.61, name: 'Vandenberg SFB, California', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'starbase',            lat: 25.99,  lon: -97.16, name: 'Starbase, Texas', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'boca chica',          lat: 25.99,  lon: -97.16, name: 'Starbase, Texas', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'wallops',             lat: 37.94,  lon: -75.47, name: 'Wallops Island, Virginia', country: 'USA', flag: '\u{1F1FA}\u{1F1F8}' },
+    { key: 'baikonur',            lat: 45.96,  lon: 63.31,  name: 'Baikonur Cosmodrome, Kazakhstan', country: 'Kazakhstan', flag: '\u{1F1F0}\u{1F1FF}' },
+    { key: 'plesetsk',            lat: 62.93,  lon: 40.57,  name: 'Plesetsk Cosmodrome, Russia', country: 'Russia', flag: '\u{1F1F7}\u{1F1FA}' },
+    { key: 'vostochny',           lat: 51.88,  lon: 128.33, name: 'Vostochny Cosmodrome, Russia', country: 'Russia', flag: '\u{1F1F7}\u{1F1FA}' },
+    { key: 'kourou',              lat: 5.17,   lon: -52.77, name: 'Guiana Space Centre, Kourou', country: 'France', flag: '\u{1F1EB}\u{1F1F7}' },
+    { key: 'sriharikota',         lat: 13.73,  lon: 80.23,  name: 'Satish Dhawan Space Centre, India', country: 'India', flag: '\u{1F1EE}\u{1F1F3}' },
+    { key: 'jiuquan',             lat: 40.96,  lon: 100.29, name: 'Jiuquan Satellite Launch Center, China', country: 'China', flag: '\u{1F1E8}\u{1F1F3}' },
+    { key: 'xichang',             lat: 28.25,  lon: 102.03, name: 'Xichang Satellite Launch Center, China', country: 'China', flag: '\u{1F1E8}\u{1F1F3}' },
+    { key: 'taiyuan',             lat: 38.85,  lon: 111.61, name: 'Taiyuan Satellite Launch Center, China', country: 'China', flag: '\u{1F1E8}\u{1F1F3}' },
+    { key: 'wenchang',            lat: 19.61,  lon: 110.95, name: 'Wenchang Spacecraft Launch Site, China', country: 'China', flag: '\u{1F1E8}\u{1F1F3}' },
+    { key: 'tanegashima',         lat: 30.40,  lon: 130.97, name: 'Tanegashima Space Center, Japan', country: 'Japan', flag: '\u{1F1EF}\u{1F1F5}' },
+    { key: 'uchinoura',           lat: 31.25,  lon: 131.08, name: 'Uchinoura Space Center, Japan', country: 'Japan', flag: '\u{1F1EF}\u{1F1F5}' },
+    { key: 'naro',                lat: 34.43,  lon: 127.54, name: 'Naro Space Center, South Korea', country: 'South Korea', flag: '\u{1F1F0}\u{1F1F7}' },
+    { key: 'mahia',               lat: -39.26, lon: 177.86, name: 'Rocket Lab Launch Complex, Mahia, New Zealand', country: 'New Zealand', flag: '\u{1F1F3}\u{1F1FF}' },
+    { key: 'rocket lab',          lat: -39.26, lon: 177.86, name: 'Rocket Lab Launch Complex, Mahia, New Zealand', country: 'New Zealand', flag: '\u{1F1F3}\u{1F1FF}' },
+    { key: 'sea launch',          lat: 0,      lon: -154,   name: 'Sea Launch platform, Pacific Ocean', country: 'Pacific Ocean', flag: '\u{1F6A2}' }
+  ];
+  function findSite(launch){
+    var pad = launch.pad || {};
+    var hay = ((pad.name || '') + ' ' + (pad.location ? pad.location.name : '')).toLowerCase();
+    for (var i = 0; i < SITES.length; i++){
+      if (hay.indexOf(SITES[i].key) !== -1) return SITES[i];
+    }
+    // Fall back to whatever lat/lon the API itself reports for the pad, if any.
+    if (pad.latitude != null && pad.longitude != null){
+      return { lat: parseFloat(pad.latitude), lon: parseFloat(pad.longitude), name: pad.name || 'Launch site' };
+    }
+    return null;
+  }
+
+  // ---------- Globe setup (shared factory) ----------
+  var base = buildEarthGlobe('rocketGlobeCanvas', 'rocketGlobeWrap', { startDist: 3.0 });
+  if (!base){
+    wrapEl.style.display = 'none';
+    if (captionEl) captionEl.textContent = '3D view unavailable in this browser.';
+    return;
+  }
+  var scene = base.scene, R = base.R, latLonToVec = base.latLonToVec;
+
+  // Pad marker
+  var padDot = new THREE.Mesh(new THREE.SphereGeometry(2.6, 14, 14), new THREE.MeshBasicMaterial({ color: 0xe8c468 }));
+  var padGlow = base.makeGlowSprite('rgba(232,196,104,1)', 22);
+  padDot.visible = false; padGlow.visible = false;
+  scene.add(padDot); scene.add(padGlow);
+
+  // Rocket marker — travels along the ascent path during the animated phase.
+  var rocketDot = new THREE.Mesh(new THREE.SphereGeometry(2.8, 14, 14), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+  var rocketGlow = base.makeGlowSprite('rgba(255,160,120,1)', 26);
+  rocketDot.visible = false; rocketGlow.visible = false;
+  scene.add(rocketDot); scene.add(rocketGlow);
+
+  // Trajectory line group — rebuilt each time a launch is selected.
+  var trajGroup = new THREE.Group();
+  scene.add(trajGroup);
+  var trajMat = new THREE.LineBasicMaterial({ color: 0xff9a6a, transparent: true, opacity: 0.85 });
+  var ringMat = new THREE.LineBasicMaterial({ color: 0x8fb8d6, transparent: true, opacity: 0.30 });
+
+  // Small canvas-text sprite for the pad's flag/country label — sits beside
+  // the pad marker, billboarded toward the camera like the N/S pole labels.
+  var siteLabelSprite = null;
+  function makeSiteLabel(flag, country){
+    var cnv = document.createElement('canvas'); cnv.width = 220; cnv.height = 64;
+    var ctx = cnv.getContext('2d');
+    ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.font = '34px sans-serif';
+    ctx.fillText(flag || '', 4, 32);
+    ctx.font = '20px Georgia, serif';
+    ctx.fillStyle = 'rgba(27,27,23,0.92)';
+    ctx.fillText(country || '', 52, 32);
+    var sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(cnv), transparent: true, depthTest: false }));
+    sprite.scale.set(34, 10, 1);
+    return sprite;
+  }
+
+  // Orbit-name classifier — maps the API's free-text mission.orbit.name to
+  // the same LEO/MEO/GEO/HEO badge styling used on the satellite tracker.
+  function classifyOrbit(name){
+    if (!name) return null;
+    var n = name.toLowerCase();
+    if (n.indexOf('geo') !== -1 || n.indexOf('geostationary') !== -1 || n.indexOf('geosynchronous') !== -1){
+      return { label: name, cls: 'geo' };
+    }
+    if (n.indexOf('gto') !== -1 || n.indexOf('transfer') !== -1 || n.indexOf('molniya') !== -1 || n.indexOf('heliocentric') !== -1 || n.indexOf('escape') !== -1 || n.indexOf('lunar') !== -1 || n.indexOf('translunar') !== -1){
+      return { label: name, cls: 'heo' };
+    }
+    if (n.indexOf('meo') !== -1 || n.indexOf('medium earth') !== -1){
+      return { label: name, cls: 'meo' };
+    }
+    // LEO, SSO/sun-synchronous, polar, and most others fly low.
+    return { label: name, cls: 'leo' };
+  }
+
+  // Rough time-to-insertion, purely illustrative — low orbits insert in
+  // roughly 8-10 minutes, geostationary transfer / high-energy orbits take
+  // a longer, multi-burn coast to insertion.
+  function estimateInsertionMinutes(orbitName){
+    var n = (orbitName || '').toLowerCase();
+    if (n.indexOf('geo') !== -1 || n.indexOf('gto') !== -1 || n.indexOf('transfer') !== -1 || n.indexOf('lunar') !== -1 || n.indexOf('escape') !== -1){
+      return '25\u201330';
+    }
+    if (n.indexOf('meo') !== -1){
+      return '14\u201318';
+    }
+    return '8\u201310';
+  }
+
+  base.setTick(function(t){
+    var pulse = 0.6 + 0.4 * Math.sin(t);
+    padGlow.material.opacity = padDot.visible ? (0.5 + 0.3*pulse) : 0;
+    padGlow.scale.set(22 + 6*pulse, 22 + 6*pulse, 1);
+    padGlow.position.copy(padDot.position);
+    if (rocketDot.visible){
+      rocketGlow.material.opacity = 0.6 + 0.35*pulse;
+      rocketGlow.scale.set(24 + 8*pulse, 24 + 8*pulse, 1);
+      rocketGlow.position.copy(rocketDot.position);
+    }
+  });
+
+  // ---------- Trajectory geometry ----------
+  // Builds an illustrative ascent curve from a pad toward orbit. The launch
+  // azimuth is chosen so the resulting ground track inclination roughly
+  // matches what a real mission from that latitude would fly for a typical
+  // prograde (eastward) orbit — it does not model a specific mission's real
+  // flown azimuth, payload, or staging, only a representative gravity-turn
+  // shape rising smoothly from the pad to a notional 250 km park orbit.
+  function buildAscentPoints(site){
+    var lat0 = site.lat, lon0 = site.lon;
+    var steps = 90;
+    var pts = [];
+    // A simple bearing biased east-northeast/east-southeast depending on
+    // hemisphere, which is the realistic direction for prograde launches.
+    var azimuthDeg = lat0 >= 0 ? 90 + Math.min(28, Math.abs(lat0)) * 0.5
+                                : 90 - Math.min(28, Math.abs(lat0)) * 0.5;
+    var azimuth = azimuthDeg * Math.PI/180;
+    for (var i = 0; i <= steps; i++){
+      var f = i / steps; // 0 at pad, 1 at orbital insertion
+      // Altitude profile: slow climb off the pad, steepens, then flattens
+      // into orbit — a smooth eased curve standing in for a real gravity turn.
+      var altKm = 250 * (1 - Math.pow(1 - f, 2.2));
+      // Downrange angular distance covered, in degrees of great-circle arc —
+      // grows roughly with f, capped near a realistic insertion range.
+      var downrangeDeg = 22 * Math.pow(f, 1.3);
+      // Walk along the initial bearing from the pad by downrangeDeg.
+      var lat1 = lat0 * Math.PI/180, lon1 = lon0 * Math.PI/180;
+      var d = downrangeDeg * Math.PI/180;
+      var lat2 = Math.asin(Math.sin(lat1)*Math.cos(d) + Math.cos(lat1)*Math.sin(d)*Math.cos(azimuth));
+      var lon2 = lon1 + Math.atan2(Math.sin(azimuth)*Math.sin(d)*Math.cos(lat1), Math.cos(d)-Math.sin(lat1)*Math.sin(lat2));
+      pts.push({
+        lat: lat2 * 180/Math.PI,
+        lon: ((lon2 * 180/Math.PI + 540) % 360) - 180,
+        altKm: altKm,
+        f: f
+      });
+    }
+    // Inclination implied by this launch latitude and azimuth — the standard
+    // spherical-trig relation between launch latitude, flight azimuth (from
+    // true north), and the resulting orbital inclination.
+    var lat0rad = lat0 * Math.PI/180;
+    var incRad = Math.acos(Math.cos(lat0rad) * Math.sin(azimuth));
+    var incDeg = incRad * 180/Math.PI;
+    return { pts: pts, azimuth: azimuth, inclinationDeg: incDeg };
+  }
+
+  // Builds a full great-circle ring at orbital altitude, in the same plane
+  // as the ascent path's implied orbit — answers "where does it end up"
+  // once insertion completes, rather than just showing the climb.
+  function buildOrbitRing(site, azimuth){
+    var lat0 = site.lat * Math.PI/180, lon0 = site.lon * Math.PI/180;
+    var pts = [];
+    var steps = 96;
+    for (var i = 0; i <= steps; i++){
+      var d = (i / steps) * 2 * Math.PI;
+      var lat2 = Math.asin(Math.sin(lat0)*Math.cos(d) + Math.cos(lat0)*Math.sin(d)*Math.cos(azimuth));
+      var lon2 = lon0 + Math.atan2(Math.sin(azimuth)*Math.sin(d)*Math.cos(lat0), Math.cos(d)-Math.sin(lat0)*Math.sin(lat2));
+      pts.push({ lat: lat2 * 180/Math.PI, lon: ((lon2 * 180/Math.PI + 540) % 360) - 180 });
+    }
+    return pts;
+  }
+
+
+  var currentPts = null;
+  var currentSite = null;
+  var currentLaunch = null;
+  var rafTimer = null;
+
+  function clearTraj(){
+    while (trajGroup.children.length){
+      var line = trajGroup.children[0];
+      trajGroup.remove(line);
+      line.geometry.dispose();
+    }
+    if (siteLabelSprite){ scene.remove(siteLabelSprite); siteLabelSprite = null; }
+  }
+
+  function hideReadouts(){
+    if (readoutsEl) readoutsEl.style.display = 'none';
+    if (orbitBadgeEl) orbitBadgeEl.style.display = 'none';
+    if (incStatEl) incStatEl.style.display = 'none';
+    if (durStatEl) durStatEl.style.display = 'none';
+  }
+
+  function selectLaunch(launch){
+    if (!launch) return;
+    currentLaunch = launch;
+    var site = findSite(launch);
+    clearTraj();
+    if (!site){
+      padDot.visible = false; padGlow.visible = false;
+      rocketDot.visible = false; rocketGlow.visible = false;
+      if (captionEl) captionEl.textContent = (launch.name || 'This mission') + ' — launch site not in our lookup table yet, so no trajectory is shown.';
+      hideReadouts();
+      updatePickRow();
+      return;
+    }
+    currentSite = site;
+    var built = buildAscentPoints(site);
+    currentPts = built.pts;
+
+    var vec3pts = currentPts.map(function(p){ return latLonToVec(p.lat, p.lon, R * (1 + p.altKm / 6371)); });
+    trajGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(vec3pts), trajMat));
+
+    // Fainter full ring showing the final orbital plane once insertion completes.
+    var ringPts = buildOrbitRing(site, built.azimuth).map(function(p){
+      return latLonToVec(p.lat, p.lon, R * (1 + 250 / 6371));
+    });
+    trajGroup.add(new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(ringPts), ringMat));
+
+    var padVec = latLonToVec(site.lat, site.lon, R * 1.01);
+    padDot.position.copy(padVec);
+    padDot.visible = true; padGlow.visible = true;
+
+    if (site.flag || site.country){
+      siteLabelSprite = makeSiteLabel(site.flag, site.country);
+      siteLabelSprite.position.copy(latLonToVec(site.lat, site.lon, R * 1.16));
+      scene.add(siteLabelSprite);
+    }
+
+    var badge = (launch.status && launch.status.name) || '';
+    var isFlight = badge.toLowerCase().indexOf('flight') !== -1;
+    rocketDot.visible = true; rocketGlow.visible = true;
+    if (!isFlight){
+      // Not yet flying — sit the marker on the pad.
+      rocketDot.position.copy(padVec);
+    }
+
+    var orbitName = (launch.mission && launch.mission.orbit && launch.mission.orbit.name) || '';
+    var orbitInfo = classifyOrbit(orbitName);
+    if (readoutsEl) readoutsEl.style.display = 'flex';
+    if (orbitBadgeEl){
+      if (orbitInfo){
+        orbitBadgeEl.textContent = orbitInfo.label;
+        orbitBadgeEl.className = 'orbit-badge ' + orbitInfo.cls;
+        orbitBadgeEl.style.display = '';
+      } else {
+        orbitBadgeEl.style.display = 'none';
+      }
+    }
+    if (incStatEl){
+      incStatEl.textContent = '\u2248' + Math.round(built.inclinationDeg) + '\u00b0 inclination';
+      incStatEl.style.display = '';
+    }
+    if (durStatEl){
+      durStatEl.textContent = 'insertion ~' + estimateInsertionMinutes(orbitName) + ' min after liftoff';
+      durStatEl.style.display = '';
+    }
+
+    if (captionEl){
+      captionEl.textContent = (launch.name || 'This mission') + ' \u2014 launching from ' + site.name +
+        (isFlight ? '. Currently in flight; the path shown is illustrative, not its real tracked position.' : '. Illustrative ascent path shown for this site and a typical eastward orbit.');
+    }
+    updatePickRow();
+
+    if (rafTimer){ clearInterval(rafTimer); rafTimer = null; }
+    if (isFlight){
+      // Animate the rocket marker along the illustrative path on a fixed
+      // loop, since we have no real launch-elapsed-time to sync to from a
+      // free feed — looping makes clear this is a representative animation.
+      var i = 0;
+      rafTimer = setInterval(function(){
+        i = (i + 1) % currentPts.length;
+        var p = currentPts[i];
+        rocketDot.position.copy(latLonToVec(p.lat, p.lon, R * (1 + p.altKm/6371)));
+      }, 80);
+    }
+  }
+
+  function updatePickRow(){
+    if (!pickRowEl) return;
+    pickRowEl.querySelectorAll('.rocket-globe-pick').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-name') === (currentLaunch && currentLaunch.name));
+    });
+  }
+
+  // Expose a hook the schedule module calls when a card is clicked.
+  window.__rocketGlobeSelect = function(launch){
+    selectLaunch(launch);
+  };
+
+  // Rebuild the quick-pick row from whatever cards are currently in the
+  // schedule grid — called after every render, including after "View more
+  // launches" expands the grid, so the row grows along with it rather than
+  // staying frozen at the first 6. Capped to PICK_DEFAULT_VISIBLE by default,
+  // with its own "view more" toggle so a 50-card list doesn't dump 50
+  // buttons on the page at once.
+  var PICK_DEFAULT_VISIBLE = 6;
+  var pickShowAll = false;
+  function rebuildPickRow(){
+    if (!pickRowEl) return;
+    var all = window.__rocketLaunchesAll || [];
+    if (!all.length) return;
+    var visible = pickShowAll ? all : all.slice(0, PICK_DEFAULT_VISIBLE);
+    var html = visible.map(function(l, i){
+      var n = l.name || 'Unnamed mission';
+      var site = findSite(l);
+      var tag = (site && (site.flag || site.country)) ? ' \u00b7 ' + (site.flag || '') + (site.country ? ' ' + site.country : '') : '';
+      return '<button type="button" class="rocket-globe-pick" data-idx="' + i + '" data-name="' + n.replace(/"/g,'&quot;') + '">' + n + tag + '</button>';
+    }).join('');
+    var hiddenCount = all.length - PICK_DEFAULT_VISIBLE;
+    if (hiddenCount > 0){
+      html += '<button type="button" class="rocket-globe-pick rocket-globe-pick-more" id="rocketPickMoreBtn">' +
+        (pickShowAll ? 'Show fewer' : 'More (' + hiddenCount + ')') +
+        '</button>';
+    }
+    pickRowEl.innerHTML = html;
+    pickRowEl.querySelectorAll('.rocket-globe-pick').forEach(function(btn){
+      if (btn.id === 'rocketPickMoreBtn'){
+        btn.addEventListener('click', function(){
+          pickShowAll = !pickShowAll;
+          rebuildPickRow();
+        });
+        return;
+      }
+      btn.addEventListener('click', function(){
+        var idx = parseInt(btn.getAttribute('data-idx'), 10);
+        var launch = (window.__rocketLaunchesAll || [])[idx];
+        if (launch && window.__rocketGlobeSelect) window.__rocketGlobeSelect(launch);
+      });
+    });
+    updatePickRow();
+  }
+  window.__rocketGlobeRebuildPicks = rebuildPickRow;
+
+  // The schedule module's fetch may already have completed by the time this
+  // runs (script order), or may not — poll briefly either way, then keep
+  // listening for further re-renders via the exposed rebuild hook above.
+  var pickPollCount = 0;
+  var pickPoll = setInterval(function(){
+    pickPollCount++;
+    if (window.__rocketLaunchesAll && window.__rocketLaunchesAll.length){
+      clearInterval(pickPoll);
+      rebuildPickRow();
+    }
+    if (pickPollCount > 100) clearInterval(pickPoll); // give up after ~30s
+  }, 300);
 })();
 </script>
 </body>
